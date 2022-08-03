@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#master-wrapper {
+    max-width: 100%;
+}
+
+.main-header {
+    width: 100vw;
+    background-color: #FC596B;
+    height: 30px;
+}
+
+.top-info {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: #F1F1F1;
+    width: 100vw;
+}
+
+/* .top-header-properties-three a {
+    text-decoration: none;
+} */
+
+/* .shipping,
+.summer,
+.about {
+    height: 30px;
+    line-height: 30px;
+    color: #F1F1F1;
+    text-decoration: none;
+} */
+
+#wrapper {
+    min-width: 100%;
+}
+
+.sub-wrapper {
+    max-width: 1330px;
+    margin: 0 auto;
+}
+
+.top-header-container {
+    min-width: 1390px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* .top-header-width-one {
+    width: 30.333vw;
+    float: left;
+}
+
+.top-header-width-two {
+    width: 30.333vw;
+    float: left;
+}
+
+.top-header-width-three {
+    width: 30.333vw;
+    float: left;
+} */
+
+/* .top-header-properties-one {
+    text-align: center;
+}
+
+.top-header-properties-two {
+    text-align: center;
+}
+
+.top-header-properties-three {
+    text-align: center;
+} */
+
+
+/* Header Component */
+
+.width-header {
+    margin-bottom: 16vh;
+}
+
+.structure-header {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+div .lines-header {
+    margin-top: 60px;
+    margin-bottom: 4px;
+    border-top: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+    padding: 4px 0px;
+}
+
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background-color: #F1F1F1;
+    padding: 5px 0px;
+
+}
+
+.header-links li {
+    list-style-type: none;
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+
+.image-shoes img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    margin-top: 60px;
+}
+
+/* End of Header Component */
+
+
+
+/* Home Component */
+
+.clearfix::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+/* End of Home Component */
+
+
+
+
+
+/* Sidebar Component */
+
+
+#sidebar-parent {
+    min-width: 300px;
+}
+
+.sidebar-float {
+    width: 20%;
+    float: left;
+}
+
+.sidebar-properties {
+    min-height: 500px;
+    padding-right: 5px;
+}
+
+.sidebar-items {
+    text-align: left;
+}
+
+.material-type {
+    text-align: left;
+    padding: 20px 40px 0px;
+}
+
+/* leather radiobutton */
+
+.input-leather {
+    /* margin-left: 20px; */
+}
+
+.input-suede {
+    margin-left: 20px;
+}
+
+/* laces radiobutton */
+
+.laces-section {
+    text-align: left;
+    padding: 20px 40px 0px;
+    margin: 20px 0px;
+}
+
+.input-laces {
+    /* margin-left: 20px; */
+}
+
+.input-lacesless {
+    margin-left: 20px;
+}
+
+/* price dropdown */
+
+.price-section {
+    text-align: left;
+    padding: 30px 40px 0px;
+    margin: 30px 0px;
+}
+
+.select-width {
+    min-width: 173px;
+}
+
+/* color dropdown */
+
+.color-section {
+    text-align: left;
+    padding: 30px 40px 0px;
+    margin: 30px 0px;
+}
+
+/* designer dropdown */
+
+.designer-section {
+    text-align: left;
+    padding: 30px 40px 0px;
+    margin: 30px 0px;
+}
+
+/* End of Sidebar Component */
+
+
+
+
+
+/* Images Component */
+
+.image-width {
+    min-width: 600px;
+}
+
+.image-float {
+    float: left;
+    width: 20%;
+}
+
+.image-properties {
+    padding: 0px 40px;
+}
+
+.shoes-images img {
+    width: 100%;
+}
+
+.image-names {
+    text-align: center;
+}
+
+img:nth-child(even) {
+    color: red;
+}
+
+/* End of Images Component */
+
+
+
+
+
+/* Footer Images Component */
+
+#footer {
+    background: #F1F1F1;
+    width: 100vw;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.footer-width-one {
+    width: 18%;
+    float: left;
+}
+
+.footer-properties-one {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.half-two-footer {
+    min-width: 540px;
+}
+
+.footer-width-two {
+    width: 40%;
+    float: left;
+}
+
+.footer-properties-two {
+    padding: 20px 0px;
+    padding-left: 29px;
+    margin-top: 30px;
+}
+
+.footer-width-three {
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+
+.footer-info {
+    padding-top: 30px;
+    font-size: .8vw;
+}
+
+.footer-properties-three {
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 64px;
+}
+
+.footer-column-first li {
+    list-style-type: none;
+}
+
+.footer-column-second li {
+    list-style-type: none;
+}
+
+.footer-column-third li {
+    list-style-type: none;
+}
+
+
+/* End of Footer Component */
