@@ -1,77 +1,150 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import Facebook from './Facebook';
+import Instagram from './Instagram';
+import Pinterest from './Pinterest';
+import Twitter from './Twitter';
+import Youtube from './Youtube';
+
 
 const Footer = () => {
+
+    const update = () => {
+        console.log('me');
+    }
+
     return (
-        <div id='footer'>
-            <div className="footer-container clearfix">
-                <div className="footer-width-one">
-                    <div className="footer-properties-one">
-                        <h4 className='footer-header'>Geometry</h4>
-                        <br />
-                        <ul className='footer-column-first'>
-                            <li>About</li>
-                            <li>Manufacturing</li>
-                            <li>Why custom made</li>
-                            <li>Special sizes</li>
-                            <li>Legal Notice</li>
-                            <li>Contacts</li>
-                            <li>Blog</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="footer-width-one">
-                    <div className="footer-properties-one">
-                        <h4 className='footer-header'>Geometry</h4>
-                        <br />
-                        <ul className='footer-column-second'>
-                            <li>Custom Shoes</li>
-                            <li>Custom Made Men's</li>
-                            <li>Shoes</li>
-                            <li>How it works</li>
-                            <li>Personal Inscription</li>
-                            <li>How to choose size</li>
-                            <li>Reviews</li>
-                            <li>FAQ</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="footer-width-one">
-                    <div className="footer-properties-one">
-                        <h4 className='footer-header'>Geometry</h4>
-                        <br />
-                        <ul className='footer-column-third'>
-                            <li>Track order</li>
-                            <li>Payment Methods</li>
-                            <li>Delivery</li>
-                            <li>Returns</li>
-                            <li>Terms and Conditions</li>
-                            <li>Privacy Policy</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="half-two-footer">
-                    <div className="footer-width-two">
-                        <div className="footer-properties-two">
-                            <h4>Stay Updated</h4>
-                            <input type="text" />
+        <div className='footer'>
+            <div className="container">
+
+                <div className="inner-container-columns clearfix">
+                    <div className="footer-column-one">
+                        <div className="footer-column-one-styling">
+                            <h4 className='footer-header'>About Us:</h4>
                             <br />
-                            <a href=""><span>Men</span><span>Women</span></a>
+                            <ul className='footer-column-first'>
+                                <li>About</li><br />
+                                <li>Manufacturing</li><br />
+                                <li>Why custom made</li><br />
+                                <li>Special sizes</li><br />
+                                <li>Legal Notice</li><br />
+                                <li>Contacts</li><br />
+                                <li>Blog</li>
+                            </ul>
                         </div>
                     </div>
-                    <div className="footer-width-three">
-                        <div className="footer-properties-three">
-                            <h1>Hamet</h1>
-                            <h4>Shoemakers</h4>
+                    <div className="footer-column-two">
+                        <div className="footer-column-two-styling">
+                            <h4 className='footer-header'>Shopping:</h4>
                             <br />
-                            <a href=""><span>Men</span><span>Women</span></a>
+                            <ul className='footer-column-second'>
+                                <li>Custom Shoes</li><br />
+                                <li>Custom Made Men's</li><br />
+                                <li>Shoes</li><br />
+                                <li>How it works</li><br />
+                                <li>Personal Inscription</li><br />
+                                <li>How to choose size</li><br />
+                                <li>Reviews</li><br />
+                                <li>FAQ</li>
+                            </ul>
                         </div>
                     </div>
-                    <div className="footer-info">
-                        © 2009 - 2022 CUSTOM DESIGN ITALY S.R.L. - All rights reserved. VAT: IT12281840962 - Vendor information
+                    <div className="footer-column-three">
+                        <div className="footer-column-three-styling">
+                            <h4 className='footer-header'>Orders:</h4>
+                            <br />
+                            <ul className='footer-column-third'>
+                                <li>Track order</li><br />
+                                <li>Payment Methods</li><br />
+                                <li>Delivery</li><br />
+                                <li>Returns</li><br />
+                                <li>Terms and Conditions</li><br />
+                                <li>Privacy Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="men-women">
+                        <div className="men-women-styling">
+                            <h4 className='stay-updated'>Stay Updated</h4>
+                            <input type="text" placeholder='E-mail...'
+                                className='footer-input' />
+                            <br />
+                            <div className='men-women-container'>
+                                <span onClick={update}
+                                    className='men-button'>Men</span>
+                                <span onClick={update}
+                                    className='women-button'>Women</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="footer-logo">
+                        <div className="footer-logo-styling">
+                            <h1 className='bella'>Bella</h1>
+                            <h4 className='shoemaker'>Shoemakers</h4>
+                            <br />
+                        </div>
+                    </div>
+                    <div className="footer-social">
+                        <div className="footer-social-media">
+
+                            <div className="facebook-container">
+                                <Link to={'https://www.facebook.com'}>
+                                    <p className='facebook-icon'>
+                                        <Facebook />
+                                    </p>
+                                </Link>
+                            </div>
+
+                            <div className="twitter-container">
+                                <Link to={'https://twitter.com'}>
+                                    <p className='twitter-icon'>
+                                        <Twitter />
+                                    </p>
+                                </Link>
+                            </div>
+
+                            <div className="instagram-container">
+                                <Link to={'https://www.instagram.com'}>
+                                    <p className='instagram-icon'>
+                                        <Instagram />
+                                    </p>
+                                </Link>
+                            </div>
+
+                            <div className="pinterest-container">
+                                <Link to={'https://www.pinterest.com'}>
+                                    <p className='pinterest-icon'>
+                                        <Pinterest />
+                                    </p>
+                                </Link>
+                            </div>
+
+                            <div className="youtube-container">
+                                <Link to={'https://www.youtube.com'}>
+                                    <p className='youtube-icon'>
+                                        <Youtube />
+                                    </p>
+                                </Link>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="footer-sentence-width">
+                        <div className="footer-sentence-properties">
+                            <span className='copyright-sentence'>© 2009 - 2022 CUSTOM DESIGN ITALY S.R.L. - All rights reserved. VAT: IT12281840962 - Vendor information</span>
+                        </div>
                     </div>
                 </div>
+
+                <div className="bottom-footer">
+                    <div className="inner-bottom-footer">
+
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </div >
+
     )
 }
 

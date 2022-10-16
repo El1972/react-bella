@@ -5,29 +5,40 @@ import {
     // Mobile,
     Footer,
     Home,
+    Women,
     SingleItem,
+    WomenSingleItem,
     About,
-    TopBar
+    Contact,
+    Products
 } from './pages/imports'
 
 const App = () => {
     return (
         <Router>
-            <div id="master-wrapper">
-                <TopBar />
-                <div id="wrapper">
+            <div className="top-bar-container">
+                <div className="inner-top-bar-container">
+                    <p className="top-info">FREE delivery, FREE returns and FREE remake (if shoes don't fit)</p>
+                </div>
+            </div>
+            <div className="master-wrapper">
+                <div className="wrapper">
                     <div className="sub-wrapper">
                         <Header />
                         {/* <Mobile /> */}
                         <Routes>
                             <Route path="/" element={<Home />} />
+                            <Route path="women" element={<Women />} />
                             <Route path="product/:id" element={<SingleItem />} />
+                            <Route path="women/product/:id" element={<WomenSingleItem />} />
+                            <Route path="products" element={<Products />} />
                             <Route path="about" element={<About />} />
+                            <Route path="contact" element={<Contact />} />
                         </Routes>
                     </div>
-                    <Footer />
                 </div>
             </div>
+            <Footer />
         </Router>
     )
 }

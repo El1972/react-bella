@@ -1,15 +1,945 @@
+@font-face {
+    font-family: 'libre_franklinlight';
+    src: url('./fonts/librefranklin-light-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinlight_italic';
+    src: url('./fonts/librefranklin-lightitalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinmedium';
+    src: url('./fonts/librefranklin-medium-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinmedium_italic';
+    src: url('./fonts/librefranklin-mediumitalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinregular';
+    src: url('./fonts/librefranklin-regular-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinsemibold';
+    src: url('./fonts/librefranklin-semibold-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinsemibold_italic';
+    src: url('./fonts/librefranklin-semibolditalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinthin';
+    src: url('./fonts/librefranklin-thin-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinthin_italic';
+    src: url('./fonts/librefranklin-thinitalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'libre_franklinblack';
+    src: url('./fonts/librefranklin-black-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinblack_italic';
+    src: url('./fonts/librefranklin-blackitalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinbold';
+    src: url('./fonts/librefranklin-bold-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinbold_italic';
+    src: url('./fonts/librefranklin-bolditalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinextrabold';
+    src: url('./fonts/librefranklin-extrabold-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinXBdIt';
+    src: url('./fonts/librefranklin-extrabolditalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-extrabolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinextralight';
+    src: url('./fonts/librefranklin-extralight-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinXLtIt';
+    src: url('./fonts/librefranklin-extralightitalic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-extralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'libre_franklinitalic';
+    src: url('./fonts/librefranklin-italic-webfont.woff2') format('woff2'),
+        url('./fonts/librefranklin-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'md_primer_testblack';
+    src: url('./fonts/mdprimertest-black-webfont.woff2') format('woff2'),
+        url('./fonts/mdprimertest-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'md_primer_testbold';
+    src: url('./fonts/mdprimertest-bold-webfont.woff2') format('woff2'),
+        url('./fonts/mdprimertest-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'md_primer_testlight';
+    src: url('./fonts/mdprimertest-light-webfont.woff2') format('woff2'),
+        url('./fonts/mdprimertest-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'md_primer_testmedium';
+    src: url('./fonts/mdprimertest-medium-webfont.woff2') format('woff2'),
+        url('./fonts/mdprimertest-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'md_primer_testregular';
+    src: url('./fonts/mdprimertest-regular-webfont.woff2') format('woff2'),
+        url('./fonts/mdprimertest-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'md_primer_testsemibold';
+    src: url('./fonts/mdprimertest-semibold-webfont.woff2') format('woff2'),
+        url('./fonts/mdprimertest-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'helveticaneueheavy';
+    src: url('./fonts/helveticaneuehv-webfont.woff2') format('woff2'),
+        url('./fonts/helveticaneuehv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'helveticaneueitalic';
+    src: url('./fonts/helveticaneueit-webfont.woff2') format('woff2'),
+        url('./fonts/helveticaneueit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'helveticaneueultralight';
+    src: url('./fonts/helveticaneueultralightv130-webfont.woff2') format('woff2'),
+        url('./fonts/helveticaneueultralightv130-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'helveticaneuelight';
+    src: url('./fonts/light-webfont.woff2') format('woff2'),
+        url('./fonts/light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'arconregular';
+    src: url('./fonts/arcon-regular-webfont.woff2') format('woff2'),
+        url('./fonts/arcon-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url('./fonts/raleway-extralight-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewayextralight_italic';
+    src: url('./fonts/raleway-extralightitalic-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-extralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewayitalic';
+    src: url('./fonts/raleway-italic-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('./fonts/raleway-light-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaylight_italic';
+    src: url('./fonts/raleway-lightitalic-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('./fonts/raleway-medium-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaymedium_italic';
+    src: url('./fonts/raleway-mediumitalic-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('./fonts/raleway-regular-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('./fonts/raleway-semibold-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaysemibold_italic';
+    src: url('./fonts/raleway-semibolditalic-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('./fonts/raleway-thin-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaythin_italic';
+    src: url('./fonts/raleway-thinitalic-webfont.woff2') format('woff2'),
+        url('./fonts/raleway-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'poppinsextralight';
+    src: url('./fonts/poppins-extralight-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsextralight_italic';
+    src: url('./fonts/poppins-extralightitalic-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-extralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinslight';
+    src: url('./fonts/poppins-light-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinslight_italic';
+    src: url('./fonts/poppins-lightitalic-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url('./fonts/poppins-medium-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsmedium_italic';
+    src: url('./fonts/poppins-mediumitalic-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('./fonts/poppins-regular-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinssemibold';
+    src: url('./fonts/poppins-semibold-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinssemibold_italic';
+    src: url('./fonts/poppins-semibolditalic-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsthin';
+    src: url('./fonts/poppins-thin-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsthin_italic';
+    src: url('./fonts/poppins-thinitalic-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppinsbold';
+    src: url('./fonts/poppins-bold-webfont.woff2') format('woff2'),
+        url('./fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#master-wrapper {
-    max-width: 100%;
+
+
+/* 
+Modal - 22
+Top Bar - 294
+App - 316
+Header - 339
+Sidebar - 461
+Home - 551
+SingleItem - 609
+Products - 793
+Cart - 888
+About - 964
+Contact - 1108
+Footer - 1245
+*/
+
+
+
+
+
+/* Piece Of Properties Applied To All Headings */
+
+.inner-main-header-wrapper {
+    margin: 0;
+    width: 100%;
 }
 
-.main-header {
-    width: 100vw;
+.header-container {
+    text-align: center;
+    padding: 35px 0px 7px 0px;
+}
+
+.cart-header-container {
+    text-align: center;
+    padding: 35px 0px 20px 0px;
+}
+
+.about-header {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'md_primer_testsemibold';
+}
+
+.sub-header-container {
+    text-align: center;
+    font-family: 'helveticaneuelight';
+}
+
+.sub-header-itself {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.chevron-right {
+    rotate: calc(270deg);
+    font-size: 21.5px;
+    padding: 0px 6.8px;
+    vertical-align: middle;
+}
+
+/* End of Piece Of Properties Applied To All Headings */
+
+
+
+
+/* Modal */
+
+.active {
+    background-color: #FC596B;
+    color: #fff;
+}
+
+.modal-browser-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    display: none;
+}
+
+.modal-window-measure {
+    width: 30%;
+    float: right;
+}
+
+.modal-window-qualities-position {
+    width: 539px;
+    height: 320px;
+    position: absolute;
+    top: 54px;
+    right: 0px;
+    margin-right: 50px;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    border: 4px solid #D8D8D8;
+}
+
+.modal-window-position-container {
+    position: relative;
+}
+
+.buttons-container {
+    display: block;
+    width: 100%;
+}
+
+.inner-buttons-container {
+    height: 60px;
+}
+
+.modal-single-info-size-container {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 170px;
+    width: 13%;
+    font-size: 16px;
+}
+
+.modal-single-info-size-button {
+    font-size: 16px;
+}
+
+.modal-single-info-size {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid gray;
+    width: 63px;
+    font-family: 'helveticaneuelight';
+}
+
+.modal-single-info-cart-container {
+    position: absolute;
+    top: 10px;
+    right: 65px;
+    width: 20%;
+    font-size: 16px;
+}
+
+.modal-single-info-cart-button {
+    font-size: 16px;
+}
+
+.modal-single-info-cart {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #FC596B;
+    text-transform: uppercase;
+    background-color: #FC596B;
+    outline: none;
+    width: 160px;
+    font-style: initial;
+    color: #fff;
+    font-family: 'helveticaneuelight';
+}
+
+.modal-cart-icon {
+    margin-right: 6px;
+    vertical-align: baseline;
+    font-size: 14px;
+    margin-bottom: -.7px;
+}
+
+.countries-container {
+    width: 100%;
+}
+
+.inner-countries-container {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.countries-styling {
+    display: inline-block;
+    padding: 0px 3px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.britain,
+.america,
+.european-union {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 17px;
+}
+
+/* border-radius: 15px 0 0 15px */
+
+.sizes-container {
+    width: 100%;
+}
+
+.inner-sizes-container {
+    text-align: center;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 5px;
+}
+
+.us-seven,
+.us-eight,
+.us-nine,
+.us-ten,
+.us-eleven,
+.us-twelve,
+.us-thirteen,
+.us-fourteen {
+    display: inline-block;
+}
+
+.uk-six,
+.uk-seven,
+.uk-eight,
+.uk-nine,
+.uk-ten,
+.uk-eleven,
+.uk-twelve,
+.uk-thirteen {
+    display: inline-block;
+    border: 1px solid #4e3009;
+}
+
+.eu-fourty,
+.eu-fourty-one,
+.eu-fourty-two,
+.eu-fourty-three,
+.eu-fourty-four,
+.eu-fourty-five,
+.eu-fourty-six,
+.eu-fourty-seven {
+    display: inline-block;
+}
+
+.inner-sizes-container .uk-six,
+.uk-seven,
+.uk-eight,
+.uk-nine,
+.uk-ten,
+.uk-eleven,
+.uk-twelve,
+.uk-thirteen {
+    display: inline-block;
+    border-radius: 25px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.size-button {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 34px;
+    height: 34px;
+    line-height: 31px;
+    text-align: center;
+    font-family: 'helveticaneuelight';
+    cursor: pointer;
+}
+
+.size-heading-container {
+    width: 100%;
+}
+
+.inner-size-heading-container {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    font-family: 'helveticaneuelight';
+}
+
+.what-my-size-container {
+    width: 100%;
+}
+
+.inner-what-my-size-container {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.what-my-size {
+    font-size: 14px;
+    text-decoration: underline;
+    font-family: 'helveticaneuelight';
+    letter-spacing: normal;
+}
+
+.what-go-home-container {
+    width: 100%;
+}
+
+.inner-what-go-home-container {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.go-home-sentence-button {
+    font-size: 16px;
+}
+
+.go-home-sentence {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #FC596B;
+    text-transform: uppercase;
+    background-color: #FC596B;
+    outline: none;
+    color: #fff;
+    width: 160px;
+    font-family: 'helveticaneuelight';
+}
+
+.go-home {
+    margin-right: 8px;
+    vertical-align: baseline;
+    font-size: 15px;
+    margin-bottom: -1.7px;
+}
+
+/* End Of Modal */
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+/* TopBar */
+
+.top-bar-container {
+    width: 100%;
+}
+
+.inner-top-bar-container {
     background-color: #FC596B;
     height: 30px;
 }
@@ -18,130 +948,198 @@
     text-align: center;
     height: 30px;
     line-height: 30px;
-    display: block;
     color: #F1F1F1;
-    width: 100vw;
 }
 
-/* .top-header-properties-three a {
-    text-decoration: none;
-} */
+/* End Of TopBar */
 
-/* .shipping,
-.summer,
-.about {
-    height: 30px;
-    line-height: 30px;
-    color: #F1F1F1;
-    text-decoration: none;
-} */
+/* -------------------------------------------------------------------------------- */
 
-#wrapper {
-    min-width: 100%;
+/* App */
+
+.master-wrapper {
+    margin: 0 auto;
+    max-width: 1330px;
+}
+
+.wrapper {
+    max-width: 100vw;
 }
 
 .sub-wrapper {
     max-width: 1330px;
     margin: 0 auto;
+    margin-bottom: 80px;
 }
 
-.top-header-container {
-    min-width: 1390px;
+/* End Of App */
+
+
+/* ---------------------------------------------------------------------------------
+
+
+/* Hero Component */
+
+.hero-shoe {
     margin: 0 auto;
-    text-align: center;
+    display: block;
+    width: 94%;
+    margin-top: 50px;
 }
 
-/* .top-header-width-one {
-    width: 30.333vw;
-    float: left;
-}
+/* End of Hero Component */
 
-.top-header-width-two {
-    width: 30.333vw;
-    float: left;
-}
 
-.top-header-width-three {
-    width: 30.333vw;
-    float: left;
-} */
-
-/* .top-header-properties-one {
-    text-align: center;
-}
-
-.top-header-properties-two {
-    text-align: center;
-}
-
-.top-header-properties-three {
-    text-align: center;
-} */
+/* -------------------------------------------------------------------------------- */
 
 
 /* Header Component */
 
-.width-header {
-    margin-bottom: 16vh;
+.login-cart-container {
+    position: relative;
+    float: right;
+    /* width: 20%; */
 }
 
-.structure-header {
-    max-width: 1000px;
+.inner-login-cart-container {
+    position: absolute;
+    top: -52px;
+    right: 0px;
+    height: 50px;
+}
+
+.cart-number {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #c3c0c0;
+    font-family: 'helveticaneuelight';
+}
+
+.brandname-container {
+    width: 100%;
+}
+
+.inner-brandname-container {
+    height: 34px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.brandname-header-itself {
+    font-family: 'poppinssemibold';
+    letter-spacing: 1.5px;
+    font-size: 48px;
+    display: inline-block;
+}
+
+.brandname-sentence-edit {
+    text-align: center;
+    font-family: 'helveticaneueultralight';
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    line-height: 22px;
+    /* padding-top: 10px; */
+}
+
+.width-header {
+    max-width: 1060px;
     margin: 0 auto;
 }
 
 div .lines-header {
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: 4px;
     border-top: 1px solid #F1F1F1;
     border-bottom: 1px solid #F1F1F1;
     padding: 4px 0px;
 }
 
+.properties-header .header-links {
+    text-align: center;
+}
 
 .header-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     min-height: 50px;
     background-color: #F1F1F1;
     padding: 5px 0px;
-
 }
 
 .header-links li {
-    list-style-type: none;
-    margin: 0px 20px;
-    padding: 0px 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 18px;
 }
 
-.image-shoes img {
-    margin: 0 auto;
-    display: block;
-    max-width: 100%;
-    margin-top: 60px;
+ul .nav-links {
+    padding: 0px 38px 0px 0px;
+    margin: 0px 0px 0px 48px;
+    font-family: 'md_primer_testregular';
 }
+
+li.first {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+li.last {
+    padding-right: 46px;
+}
+
+a {
+    min-height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #444444;
+}
+
+i {
+    vertical-align: middle;
+}
+
+li.hommer {
+    padding: 0px;
+    margin-right: 0px;
+}
+
+i.home-logo {
+    line-height: 20px;
+    height: 20px;
+    font-size: 18px;
+}
+
+.chevron {
+    font-size: 14px;
+    line-height: 10px;
+    position: relative;
+    content: [];
+    padding: 4px 0px 0px 10px;
+    width: 20px;
+    color: #888888;
+}
+
 
 /* End of Header Component */
 
 
-
-/* Home Component */
-
-.clearfix::after {
-    clear: both;
-    display: block;
-    content: '';
-}
-
-/* End of Home Component */
-
-
-
+/* --------------------------------------------------------------------------------- */
 
 
 /* Sidebar Component */
-
 
 #sidebar-parent {
     min-width: 300px;
@@ -153,7 +1151,7 @@ div .lines-header {
 }
 
 .sidebar-properties {
-    min-height: 500px;
+    min-height: 800px;
     padding-right: 5px;
 }
 
@@ -168,27 +1166,27 @@ div .lines-header {
 
 /* leather radiobutton */
 
-.input-leather {
-    /* margin-left: 20px; */
+/* .input-leather {
+    margin-left: 20px;
 }
 
 .input-suede {
     margin-left: 20px;
-}
+} */
 
 /* laces radiobutton */
 
-.laces-section {
+/* .laces-section {
     text-align: left;
     padding: 20px 40px 0px;
     margin: 20px 0px;
 }
 
 .input-laces {
-    /* margin-left: 20px; */
-}
+    margin-left: 20px;
+} */
 
-.input-lacesless {
+.input-laceless {
     margin-left: 20px;
 }
 
@@ -198,6 +1196,10 @@ div .lines-header {
     text-align: left;
     padding: 30px 40px 0px;
     margin: 30px 0px;
+}
+
+form {
+    padding-top: 5px;
 }
 
 .select-width {
@@ -223,112 +1225,1443 @@ div .lines-header {
 /* End of Sidebar Component */
 
 
+/* ----------------------------------------------------------------------------------- */
+
+/* WomenSidebar Component  */
+
+.input-suede {
+    margin-left: 20px;
+}
+
+.women-input-laceless {
+    margin-left: 0px;
+}
+
+.input-lace {
+    margin-left: 20px;
+}
+
+/* End of WomenSidebar Component  */
+
+/* ----------------------------------------------------------------------------------- */
 
 
+/* Home Component */
 
-/* Images Component */
+.clearfix::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.general-wrapper {
+    height: 1150px;
+}
 
 .image-width {
-    min-width: 600px;
+    max-width: 1320px;
+    margin-top: 100px;
 }
 
 .image-float {
     float: left;
-    width: 20%;
+    width: 19.8%;
 }
 
 .image-properties {
-    padding: 0px 40px;
+    padding: 44px 40px;
+    height: 250px;
 }
 
 .shoes-images img {
     width: 100%;
 }
 
+.shoe-one {}
+
+.shoe-container {
+    height: 111.15px;
+}
+
+.image-info-container {}
+
+.image-bestsellers {
+    text-align: center;
+    text-transform: uppercase;
+    color: #B1A575;
+    font-size: 10px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'poppinsmedium';
+}
+
 .image-names {
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.image-prices {
+    text-align: center;
+    font-family: 'poppinsmedium';
+    font-size: 12.5px;
+    color: #FC596B;
+}
+
+/* End of Home Component */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* SingleItem Component */
+
+
+.single-image-top-line-container {
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+.chevron-left {
+    rotate: calc(89deg);
+    font-size: 21.5px;
+    padding: 0px 6.5px;
+    vertical-align: middle;
+}
+
+a.back-to-list-button {
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.single-image-top-line {
+    display: inline-block;
+    width: 84px;
+    font-size: 15.6px;
+    font-family: 'helveticaneuelight';
+}
+
+.single-image-top-line-itself {
+    border-top: .1px solid black;
+    display: block;
+    width: 87.4%;
+    overflow: hidden;
+    position: relative;
+    top: -19.5px;
+    margin-left: 114px;
+}
+
+.single-image {
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.single-image-container {
+    height: 400px;
+}
+
+.single-image-width {
+    float: left;
+    width: 50%;
+}
+
+.single-image-properties {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    margin-right: 74px;
+    padding-top: 50px;
+}
+
+
+.single-info-width {
+    float: left;
+    width: 50%;
+}
+
+.inner-price-size-cart-bar {
+    width: 100%;
+    height: 43px;
+}
+
+.single-info-price-container {
+    display: inline-block;
+    width: 11%;
+    height: 42px;
+    line-height: 42px;
+}
+
+.single-info-price {
+    font-family: 'helveticaneuelight';
+    color: #FC596B;
+    height: 23px;
+    font-size: 20px;
+}
+
+.crossed-price {
+    font-family: 'poppinsregular';
+    color: #6A6A6A;
+    font-size: 14px;
+    text-decoration: line-through;
+    font-weight: 800;
+}
+
+.single-info-size-container {
+    /* display: inline-block;
+    width: 10%;
+    font-size: 16px;
+    height: 100%;
+    vertical-align: middle; */
+    width: 20%;
+    float: right;
+}
+
+.single-info-size-button {
+    font-size: 16px;
+    width: 12.5%;
+    float: right;
+    height: 41px;
+    line-height: 41px;
+}
+
+.single-info-size {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid gray;
+    width: 60px;
+    font-family: 'helveticaneuelight';
+    cursor: pointer;
+    /* height: 43px;
+    line-height: 43px; */
+}
+
+.single-info-cart-container {
+    /* text-align: right;
+    display: inline-flex;
+    align-items: center;
+    width: 30%;
+    font-size: 16px;
+    height: 100%;
+    vertical-align: middle;
+    margin-bottom: 30px 0px; */
+    width: 30%;
+    float: right;
+}
+
+/* .single-info-cart-button {
+    font-size: 16px;
+    line-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+} */
+
+.single-info-cart {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #FC596B;
+    text-transform: uppercase;
+    background-color: #FC596B;
+    outline: none;
+    width: 157px;
+    height: 43px;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'helveticaneuelight';
+}
+
+.cart-icon {
+    margin-right: 6px;
+    vertical-align: baseline;
+    margin-bottom: -.7px;
+}
+
+.manufacture-container {
+    width: 100%;
+}
+
+.inner-manufacture-container {
+    text-align: right;
+    font-size: 13.5px;
+    height: 27px;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+
+.manufacture {
+    display: inline-block;
+    margin-right: 5px;
+    padding-top: 12px;
+}
+
+.usa {
+    position: relative;
+    display: inline-block;
+    color: #FC596B;
+    font-family: 'helveticaneueitalic';
+    font-size: 13px;
+    border-bottom: 1px solid #FC596B;
+    margin-right: 25px;
+    height: 24px;
+}
+
+.pencil-container {
+    position: absolute;
+    top: 3px;
+    color: #FC596B;
+    font-size: 17px;
+    margin-right: 6px;
+    left: 81px;
+    top: 2.5px;
+}
+
+.couple-of-weeks {
+    position: relative;
+    display: inline-block;
+    font-family: 'helveticaneueitalic';
+    font-size: 13px;
+    margin-left: 1px;
+    margin-right: 23px;
+    height: 24px;
+}
+
+.question-icon-container {
+    position: absolute;
+    top: 3px;
+    color: #FC596B;
+    margin-right: 6px;
+    left: 80px;
+    top: 2.5px;
+}
+
+.border {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.product-actions {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
     text-align: center;
 }
 
-img:nth-child(even) {
-    color: red;
+.save-wishlist {
+    position: relative;
+    border-bottom: 1px solid #e1ddd5;
+    margin-right: 19px;
+    font-family: 'libre_franklinmedium';
+    font-size: 14px;
 }
 
-/* End of Images Component */
-
-
-
-
-
-/* Footer Images Component */
-
-#footer {
-    background: #F1F1F1;
-    width: 100vw;
+.send-inquiry {
+    position: relative;
+    border-bottom: 1px solid #e1ddd5;
+    margin-left: 20px;
+    font-family: 'libre_franklinmedium';
+    font-size: 14px;
 }
 
-.footer-container {
+.heart-container {
+    position: absolute;
+    color: #FC596B;
+    font-size: 14px;
+    margin-right: 6px;
+    left: -20px;
+    top: -13.5px;
+}
+
+.message-container {
+    position: absolute;
+    top: 3px;
+    color: #FC596B;
+    font-size: 17px;
+    margin-right: 6px;
+    left: -21.7px;
+    top: -12.5px;
+}
+
+.middle-border {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.description-wrapper {
+    height: 51px;
+    width: 100%;
+    border-bottom: 3px solid #f1f1f1;
+    padding-top: 6px;
+}
+
+.description {
+    display: inline-block;
+    height: 45px;
+    line-height: 50px;
+    width: 100px;
+    margin-left: 8px;
+    border-bottom: 3px solid #5b5b5b;
+    font-family: 'libre_franklinmedium';
+    font-size: 14px;
+}
+
+.single-info-text-container {
+    width: 100%;
+}
+
+.single-info-description {
+    font-size: 14px;
+    font-family: 'helveticaneuelight';
+    margin-left: 8px;
+    padding-top: 15px;
+    line-height: 17.5px;
+}
+
+.single-info-text {
+    font-size: 13.5px;
+    letter-spacing: .4px;
+    text-align: left;
+    display: inline-block;
+    /* vertical-align: middle; */
+    line-height: normal;
+    font-family: 'helveticaneuelight';
+    margin-left: 8px;
+    padding-top: 15px;
+    list-style-type: none;
+    height: 58px;
+}
+
+.single-info-text-one {
+    /* margin-left: 2px; */
+    padding-top: 0px;
+    margin-top: 0px;
+    /* padding-left: 5px; */
+    width: 50%;
+    display: inline-block;
+}
+
+.single-info-text-two,
+.single-info-text-three,
+.single-info-text-four,
+.single-info-text-five,
+.single-info-text-six {
+    /* margin-left: 2px; */
+    /* padding-top: 3px;
+    padding-left: 5px; */
+    width: 50%;
+    display: inline-block;
+    height: 21px;
+    line-height: 21px;
+}
+
+.single-info-text-one::before,
+.single-info-text-two::before {
+    width: 4.5px;
+    height: 4.5px;
+    border-radius: 50%;
+    background-color: #FC596B;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 2.5px;
+}
+
+
+
+/* End of SingleItem Component */
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Products Component */
+
+.empty-cart-container {
+    max-width: 1300px;
+    min-height: 400px;
+}
+
+.empty-sign {
+    text-align: center;
+    margin-top: 150px;
+    font-family: 'helveticaneueheavy';
+}
+
+.inner-empty-cart-container {
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-parent-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.cart-sign-container {
+    text-align: center;
+    margin: 30px 0px;
+    font-family: 'helveticaneuelight';
+}
+
+.cart-sign {
+    font-family: 'helveticaneueitalic';
+}
+
+.service-sign {
+    text-align: center;
+    margin-bottom: 7px;
+    font-family: 'helveticaneuelight';
+}
+
+.conditions-sign {
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'helveticaneuelight';
+}
+
+.top-grey-bar-container {
+    margin: 0 auto;
+    max-width: 1260px;
+}
+
+.inner-top-grey-bar-container {
+    height: 47px;
+    line-height: 50px;
+    background-color: #F1F1F1;
+    border-radius: 50px;
+    font-family: 'poppinsregular';
+    font-size: 14px;
+}
+
+.product-name {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.quantity {
+    width: 8%;
+    text-align: center;
+    display: inline-block;
+}
+
+.subtotal {
+    display: inline-block;
+    width: 41%;
+    text-align: center;
+}
+
+.main-checkout-section {
+    width: 100%;
+}
+
+.inner-main-checkout-section {
+    height: auto;
+    padding: 80px 0px 240px 0px;
+}
+
+.total-price-container {
+    width: 29.7%;
+    float: right;
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'helveticaneuelight';
+}
+
+.bottom-line {
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.clear-all-container {
+    width: 100%;
+    float: right;
+    display: block;
+    text-align: left;
+}
+
+.inner-clear-all-container {
+    height: 50px;
+}
+
+.clear-all-button {
+    width: 80px;
+    height: 30px;
+    border-radius: 16px;
+    border: .4px solid #000;
+    font-family: 'helveticaneuelight';
+    cursor: pointer;
+}
+
+/* End Of Products Component */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Cart Component */
+
+.main-container {
     max-width: 1300px;
     margin: 0 auto;
-    min-height: 300px;
+    /* display: inline-block; */
+}
+
+.inner-main-container {
+    /* height: 150px;
+    line-height: 150px; */
+    /* padding: 0px 50px; */
+}
+
+.image-section {
+    width: 21%;
+    float: left;
+}
+
+.inner-image-section {
+    /* width: 455px; */
+    height: 160px;
+    line-height: 160px;
+    text-align: center;
+}
+
+.checkout-image {
+    vertical-align: middle;
+}
+
+.info-section {
+    width: 19%;
+    float: left;
+}
+
+.inner-info-section {
+    height: 160px;
+    line-height: 160px;
+}
+
+.info-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    text-align: left;
+    /* padding-left: 0px; */
+    font-size: 13px;
+    font-family: 'poppinsextralight';
+}
+
+.quantity-section {
+    width: 33%;
+    float: left;
+}
+
+.inner-quantity-section {
+    padding: 0px 90px;
+}
+
+.inner-delete-section {
+    height: 160px;
+    line-height: 160px;
+    text-align: center;
+}
+
+div.delete-can {
+    display: inline-flex;
+    align-items: center;
+    height: 160px;
+    margin-right: 0px;
+    /* width: 180px; */
+}
+
+.can {
+    display: block;
+    margin: 0;
+}
+
+.new-price-section {
+    width: 23.5%;
+    float: right;
+    padding: 0px;
+    margin: 0px;
+}
+
+.new-inner-price-section {
+    height: 160px;
+    line-height: 160px;
+    text-align: left;
+    /* padding-left: 40px; */
+}
+
+.new-price {
+    color: #FC596B;
+    font-family: 'helveticaneuelight';
+    font-size: 15px;
+}
+
+/* .checkout-image {
+    padding-left: 30px;
+}
+
+.cart-shoe-info-container {
+    width: 20%;
+    display: inline-block;
+    height: 250px;
+}
+
+.count-container {
+    width: 50%;
+    float: right;
+}
+
+.inner-count-container {
+    height: 60px;
+    line-height: 60px;
+    padding-top: 20px;
+}
+
+.delete-container {
+    width: 40%;
+    float: right;
+}
+
+.inner-delete-container {
+    height: 40px;
+    line-height: 40px;
+    padding-top: 5px;
+}
+
+.increase-descrease-container {
+    width: 60%;
+    float: right;
+}
+
+.inner-increase-descrease-container {
+    height: 40px;
+    line-height: 40px;
+    font-family: 'helveticaneuelight';
+}
+
+.increase-button {
+    width: 35px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 11px;
+}
+
+button.descrease-button {
+    width: 35px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 11px;
+} */
+
+/* End Of Cart Component */
+
+/* ----------------------------------------------------------------------------------- */
+
+/* CountButtons Component */
+
+.increase-descrease-container {
+    width: 58%;
+    float: left;
+}
+
+.inner-increase-descrease-container {
+    height: 160px;
+    line-height: 160px;
+    text-align: center;
+    font-family: 'helveticaneuelight';
+}
+
+.increase-button {
+    width: 35px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 11px;
+}
+
+button.descrease-button {
+    width: 35px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 11px;
+}
+
+/* End Of CountButtons Component */
+
+/* ----------------------------------------------------------------------------------- */
+/* About Component */
+
+.about-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.first-section-image-wrapper {
+    margin-top: 20px;
+}
+
+.first-section-image-container {
+    float: left;
+    width: 50%;
+}
+
+.first-section-image {}
+
+.first-image {
+    display: block;
+    width: 78%;
+    margin: 0 auto;
+}
+
+.first-section-text-container {
+    float: left;
+    width: 45%;
+}
+
+.first-section-text {
+    height: 313px;
+    line-height: 313px;
+}
+
+.first-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.about-heading-one,
+.about-heading-two,
+.about-heading-three {
+    font-family: 'ralewaysemibold';
+}
+
+.about-first-paragraph,
+.about-second-paragraph {
+    font-family: 'helveticaneuelight';
+}
+
+
+
+.middle-statement-container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.middle-statement-properties {
+    height: 150px;
+    line-height: 150px;
+    background-color: #F1F1F1;
+    margin: 50px 0px;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+p.middle-statement-one {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-family: 'arconregular';
+    font-size: 26px;
+    padding-top: 40px;
+}
+
+.sewing-container {
+    position: relative;
+
+}
+
+.inner-sewing-container {
+    position: absolute;
+    bottom: -42px;
+    left: 248px;
+}
+
+.sewing-needle {
+    text-align: center;
+}
+
+.second-section-image-container {
+    float: left;
+    width: 50%;
+}
+
+.second-section-image {}
+
+.second-image {
+    display: block;
+    width: 78%;
+    margin: 0 auto;
+}
+
+.second-section-text-container {
+    float: left;
+    width: 45%;
+}
+
+.second-section-text {
+    height: 524px;
+    line-height: 524px;
+}
+
+.second-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.third-section-text-container {
+    float: left;
+    width: 60%;
+}
+
+.third-section-text {
+    height: 533px;
+    line-height: 533px;
+}
+
+.third-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.philosophy-sub-text {
+    font-family: 'helveticaneuelight';
+    padding-bottom: 19px;
+}
+
+.dotted-list {
+    padding-left: 15px;
+    font-family: 'helveticaneuelight';
+    line-height: normal;
+}
+
+.dotted-list li {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.third-section-image-container {
+    float: right;
+    width: 40%;
+}
+
+.third-section-image {
+    text-align: right;
+    height: 533px;
+
+}
+
+.third-image {
+    display: inline-block;
+}
+
+.about-third-paragraph {
+    padding-top: 16px;
+    font-family: 'helveticaneuelight';
+}
+
+/* End of About Component */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Contact Component */
+
+.contact {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.telephone-address-container {
+    margin: 30px auto;
+    max-width: 800px;
+    background-color: #F1F1F1;
+    padding: 35px;
+}
+
+.telephone-measure {
+    float: left;
+    width: 50%;
+}
+
+.telephone-qualities {
+    /* padding-left: 30px; */
+}
+
+.call-us {
+    color: #FC596B;
+    margin: 0px 0px 5px 30px;
+    font-family: 'poppinssemibold';
+}
+
+.telephone-info {
+    padding-left: 30px;
+}
+
+.telephone-info .telephone-one {
+    font-family: 'poppinssemibold';
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.telephone-info .telephone-two {
+    font-family: 'poppinssemibold';
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.telephone-info .telephone-three {
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.telephone-info .telephone-four {
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.address-measure {
+    float: left;
+    width: 50%;
+}
+
+.address-qualities {
+    padding-left: 30px;
+}
+
+.address-us {
+    color: #FC596B;
+    margin: 0px 0px 5px 30px;
+    font-family: 'poppinssemibold';
+}
+
+.address-info {
+    padding-left: 30px;
+}
+
+.address-info .address-one {
+    font-family: 'poppinssemibold';
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.address-info .address-two {
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.address-info .address-three {
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.complaints-notice-measures {
+    margin: 0 auto;
+    max-width: 614px;
+}
+
+.complaints-notice-properties {
+    text-align: left;
+    color: #444444;
+    font-family: 'ralewaylight';
+    font-size: 14px;
+}
+
+.complaints-notice {
+    display: inline-block;
+}
+
+.complaints-notice-two {
+    display: inline-block;
+    border-bottom: 1px solid #444444;
+}
+
+.form-container {
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #F1F1F1;
+}
+
+.form-qualities {
+    padding: 0px 50px 50px 50px;
+}
+
+.contact-form {
+    max-width: 750px;
+    width: 100%;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #e4e4e4;
+    padding: 7px 12px 7px 12px;
+}
+
+.input-style {
+    padding: 4px 0px;
+}
+
+.button-container {
+    max-width: 750px;
+    text-align: right;
+}
+
+.button-style {
+    float: right;
+    width: 100%;
+}
+
+.button {
+    padding: 4px 16px;
+    border-radius: 20px;
+    background-color: #FC596B;
+    border: 1px solid #FC596B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.info-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 45px 0px 0px 0px;
+}
+
+.payment-columns-measure,
+.express-columns-measure,
+.returns-columns-measure,
+.contact-columns-measure {
+    float: left;
+    width: 25%;
+}
+
+.payment-columns-qualities,
+.express-columns-qualities,
+.returns-columns-qualities,
+.contact-columns-qualities {
+    text-align: center;
+}
+
+.lock,
+.truck,
+.returns {
+    font-size: 30px;
+}
+
+.contact-icon {
+    font-size: 25px;
+}
+
+.columns {
+    text-align: center;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.contact-sign {
+    color: #FC596B;
+    /* margin: 0px 0px 5px 30px; */
+    font-family: 'poppinssemibold';
+    display: inline-block;
+    padding: 15px 0px 15px 0px;
+}
+
+.phone {
+    outline: green;
+    font-size: 28px;
+    fill: green;
+}
+
+/* End of Contact Component */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Footer Component */
+
+.footer {
+    background: #F1F1F1;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.container {
+    min-height: 286px;
+    width: 100%;
+    padding: 30px;
+}
+
+.footer-column-one {
+    width: 20%;
+    float: left;
+}
+
+.footer-column-one-styling ul li {
+    list-style-type: none;
+}
+
+.footer-column-one-styling .footer-header {
+    font-family: 'helveticaneuelight';
+    font-size: 15px;
+    color: #222222;
+    letter-spacing: .5px;
+}
+
+.footer-column-one,
+.footer-column-two,
+.footer-column-three,
+.men-women,
+.footer-logo {
+    display: flex;
     justify-content: center;
 }
 
-
-.footer-width-one {
-    width: 18%;
-    float: left;
-}
-
-.footer-properties-one {
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.half-two-footer {
-    min-width: 540px;
-}
-
-.footer-width-two {
-    width: 40%;
-    float: left;
-}
-
-.footer-properties-two {
-    padding: 20px 0px;
-    padding-left: 29px;
-    margin-top: 30px;
-}
-
-.footer-width-three {
-    width: 60%;
-    float: left;
-    text-align: center;
-}
-
-.footer-info {
-    padding-top: 30px;
-    font-size: .8vw;
-}
-
-.footer-properties-three {
-    padding: 20px;
-    margin-top: 30px;
-    margin-bottom: 64px;
-}
-
 .footer-column-first li {
-    list-style-type: none;
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    border-bottom: 1px solid #C5C5C5;
+    display: inline-block;
+    color: #222222;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+}
+
+.footer-column-two {
+    width: 20%;
+    float: left;
+}
+
+.footer-column-two-styling .footer-header {
+    font-family: 'helveticaneuelight';
+    font-size: 15px;
+    color: #222222;
+    letter-spacing: .5px;
 }
 
 .footer-column-second li {
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    border-bottom: 1px solid #C5C5C5;
+    display: inline-block;
+    color: #222222;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+}
+
+.footer-column-two-styling ul li {
     list-style-type: none;
+}
+
+.footer-column-three {
+    width: 20%;
+    float: left;
+}
+
+.footer-column-three-styling ul li {
+    list-style-type: none;
+}
+
+.footer-column-three-styling .footer-header {
+    font-family: 'helveticaneuelight';
+    font-size: 15px;
+    color: #222222;
+    letter-spacing: .5px;
 }
 
 .footer-column-third li {
-    list-style-type: none;
+    font-family: 'helveticaneuelight';
+    font-size: 14px;
+    border-bottom: 1px solid #C5C5C5;
+    display: inline-block;
+    color: #222222;
+    font-size: 13.5px;
+    letter-spacing: 1px;
 }
 
+.men-women-styling {
+    font-family: 'helveticaneuelight';
+    font-size: 15px;
+}
+
+.men-women {
+    width: 20%;
+    float: left;
+}
+
+.stay-updated {
+    margin-bottom: 17px;
+    font-family: 'libre_franklinthin';
+    letter-spacing: .3px;
+    font-size: 17px;
+}
+
+.footer-input {
+    height: 35px;
+    width: 200px;
+    border: none;
+    padding: 0px 15px;
+    border-bottom: .5px solid #cbcbcb;
+}
+
+.men-women-container {
+    display: inline;
+    height: 28px;
+    line-height: 28px;
+}
+
+.men-button {
+    border: 1px solid #C5C5C5;
+    width: 92px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 12.5px 3.5px 0px 0px;
+    color: #FC596B;
+    cursor: pointer;
+}
+
+.women-button {
+    border: 1px solid #C5C5C5;
+    width: 92px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 12.5px 0px 0px 3.5px;
+    color: #FC596B;
+    cursor: pointer;
+}
+
+.footer-logo {
+    width: 20%;
+    float: left;
+}
+
+.footer-logo-styling {
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.bella {
+    font-family: 'poppinssemibold';
+    font-size: 58px;
+    display: inline-block;
+    line-height: 82px;
+    height: 67px;
+    color: #444444;
+}
+
+.shoemaker {
+    font-family: 'poppinslight';
+    text-transform: lowercase;
+    font-size: 16px;
+    display: block;
+    letter-spacing: 4.6px;
+    line-height: 15px;
+    color: #B5B5B5;
+    padding-left: 4.5px;
+}
+
+div.footer-social {
+    width: 20%;
+    float: left;
+}
+
+.footer-social-media {
+    text-align: center;
+    padding-top: 17px;
+}
+
+.facebook-container {
+    display: inline-block;
+    padding-right: 3px;
+}
+
+.twitter-container {
+    display: inline-block;
+    padding: 0px 3px;
+}
+
+.instagram-container {
+    display: inline-block;
+    padding: 0px 3px;
+}
+
+.pinterest-container {
+    display: inline-block;
+    padding: 0px 3px;
+}
+
+.youtube-container {
+    display: inline-block;
+    padding-left: 3px;
+}
+
+.footer-sentence-width {
+    width: 54%;
+    float: right;
+}
+
+.footer-sentence-properties {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.copyright-sentence {
+    font-family: 'helveticaneuelight';
+    padding-left: 2px;
+}
+
+.inner-bottom-footer {
+    margin-top: 13px;
+    border-top: 1px solid #dedddd;
+}
 
 /* End of Footer Component */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Copy From Here: */
+
+
+/* Component  */
+
+
+
+/* End of Component  */

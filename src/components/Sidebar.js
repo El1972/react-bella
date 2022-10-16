@@ -1,71 +1,103 @@
 import React from 'react'
+import { useFiltersContext } from '../context/filters_context'
+import { get_designer } from '../side functions/get_designer';
+import { get_color } from '../side functions/get_color';
 
 const Sidebar = () => {
+
+    const { sort, handleSort,
+        filters: {
+            toggle,
+            choose,
+            colors,
+            artists
+        },
+        updateItems,
+        items
+    } = useFiltersContext();
+
+    const color = get_color(items, "colors");
+    const designer = get_designer(items, "designers");
+
     return (
         <div id='sidebar-parent'>
             <div className="sidebar-float">
                 <div className="sidebar-properties">
                     <div className="sidebar-items">
-                        <div className="material-type">
-                            <form action="">
-                                <input type="radio" className='input-leather' /> Leather
-                                <input type="radio" className='input-suede' /> Suede
+                        {/* <div className="material-type">
+                            <form>
+                                <input type="radio"
+                                    className='input-leather'
+                                    name='toggle'
+                                    value='leather'
+                                    checked={toggle === 'leather'}
+                                    onChange={updateItems}
+                                /> All
+                                <input type="radio"
+                                    className='input-suede'
+                                    name='toggle'
+                                    value='suede'
+                                    checked={toggle === 'suede'}
+                                    onChange={updateItems}
+                                /> Suede
                             </form>
-                        </div>
-                        <div className="laces-section" >
-                            <form action="">
-                                <input type="radio" className='input-laces' /> Laces
-                                <input type="radio" className='input-lacesless' /> Laceless
+                        </div> */}
+                        {/* <div className="laces-section" >
+                            <form>
+                                <input type="radio"
+                                    className='input-laces'
+                                    name='choose'
+                                    value="laces"
+                                    checked={choose === 'laces'}
+                                    onChange={updateItems}
+                                /> All
+                                <input type="radio"
+                                    className='input-laceless'
+                                    name='choose'
+                                    value="laceless"
+                                    checked={choose === 'laceless'}
+                                    onChange={updateItems}
+                                /> Laceless
                             </form>
-                        </div>
+                        </div> */}
                         <div className="price-section">
-                            <form action="">
-                                <select name="" id="" className='select-width'>
-                                    <option value="">Select Price</option>
-                                    <option value="">
-                                        <span>From $500.00 to $100.00</span>
-                                    </option>
-                                    <option value="">
-                                        <span>From $100.00 to $500.00</span>
-                                    </option>
+                            <span>--- Filter By Price ---</span>
+                            <form onSubmit={(e) => e.preventDefault()}>
+                                <label htmlFor="sort"></label>
+                                <select className='select-width'
+                                    name="sort"
+                                    value={sort}
+                                    onChange={handleSort}>
+                                    <option value="highest price">From lowest to highest</option>
+                                    <option value="lowest price">From highest to lowest</option>
                                 </select>
                             </form>
                         </div>
                         <div className="color-section">
-                            <form action="">
-                                <select name="" id="" className='select-width'>
-                                    <option value="">Select Color</option>
-                                    <option value="">
-                                        <span>Black</span>
-                                    </option>
-                                    <option value="">
-                                        <span>Brown</span>
-                                    </option>
-                                    <option value="">
-                                        <span>Blue</span>
-                                    </option>
-                                    <option value="">
-                                        <span>Red</span>
-                                    </option>
+                            <span>--- Filter By Color ---</span>
+                            <form>
+                                <label htmlFor="colors"></label>
+                                <select className='select-width'
+                                    name="colors"
+                                    value={colors}
+                                    onChange={updateItems}>
+                                    {color.map((m, index) => {
+                                        return <option key={index} value={m}>{m}</option>
+                                    })}
                                 </select>
                             </form>
                         </div>
                         <div className="designer-section">
-                            <form action="">
-                                <select name="" id="" className='select-width'>
-                                    <option value="">Select Designer</option>
-                                    <option value="">
-                                        <span>Luigi Bertolli</span>
-                                    </option>
-                                    <option value="">
-                                        <span>Francoi Mandell</span>
-                                    </option>
-                                    <option value="">
-                                        <span>Anthony Raselli</span>
-                                    </option>
-                                    <option value="">
-                                        <span>Giovanni Sollini</span>
-                                    </option>
+                            <span>--- Filter By Designer ---</span>
+                            <form>
+                                <label htmlFor="designer"></label>
+                                <select className='select-width'
+                                    name="artists"
+                                    value={artists}
+                                    onChange={updateItems}>
+                                    {designer.map((d, index) => {
+                                        return <option key={index} value={d}>{d}</option>
+                                    })}
                                 </select>
                             </form>
                         </div>

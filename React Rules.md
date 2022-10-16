@@ -903,6 +903,7 @@ const Practice = () => {
                 <button type='submit' onClick={handleSubmit}>Press</button>
             </form>
 
+
             {people.map((p) => {
                 const { id, firstName, email, age } = p
                 return <div key={id}>
