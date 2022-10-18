@@ -27,6 +27,7 @@ const checkWomanItem = () => {
 const mainState = {
     sizes: [],
     descriptions: [],
+    women_descriptions: [],
     cart: checkItem(),
     woman_cart: checkWomanItem(),
     items_count: 0,
@@ -71,6 +72,18 @@ export const AddToCartProvider = ({ children }) => {
 
     useEffect(() => {
         fetchDescriptions()
+    }, [])
+
+
+    const fetchWomenDescriptions = async () => {
+        const response = await axios.get('http://localhost:8888/women_descriptions.php')
+        const women_description = response.data
+
+        dispatch({ type: 'FETCH_WOMEN_DESCRIPTIONS', payload: women_description })
+    }
+
+    useEffect(() => {
+        fetchWomenDescriptions()
     }, [])
 
 

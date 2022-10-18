@@ -12,6 +12,10 @@ const add_to_cart_reducer = (state, action) => {
         return { ...state, descriptions: [...action.payload] }
     }
 
+    if (action.type === 'FETCH_WOMEN_DESCRIPTIONS') {
+        return { ...state, women_descriptions: [...action.payload] }
+    }
+
 
 
     if (action.type === 'ADD_TO_CART') {
