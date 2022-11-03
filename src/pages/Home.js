@@ -5,12 +5,12 @@ import { Sidebar } from './imports'
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 
-
+//  - 855
 
 const Home = () => {
 
     let { filtered_items } = useFiltersContext();
-
+    console.log(filtered_items);
     return (
         <div>
             <div className="main-header-wrapper">

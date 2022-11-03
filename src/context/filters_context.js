@@ -10,9 +10,10 @@ const initialState = {
     women_filtered_items: [],
     sort: "select price",
     filters: {
-        toggle: "leather",
-        choose: "laces",
-        women_choose: "laceless",
+        // toggle: "oxford",
+        // choose: "loafer",
+        all_shoes: "all_shoes",
+        women_shoes: "women_shoes",
         colors: "select color",
         artists: "select designer"
     }
@@ -52,9 +53,12 @@ export const FiltersProvider = ({ children }) => {
     const updateItems = (e) => {
         let name = e.target.name
         let value = e.target.value
+        if (name === "all_shoes" || name === "women_shoes" || name === "fabric" || name === "type") {
+            value = e.target.textContent
+            console.log(value);
+        }
         dispatch({ type: 'UPDATE_ITEMS', payload: { name, value } })
     }
-
 
     // We're using only one useEffect() with both actions at the same 
     // time, because in Home.js component we're mapping 'filtered_items'

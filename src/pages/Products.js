@@ -24,7 +24,7 @@ const Products = () => {
         )
     }
 
-
+    console.log(cart);
 
     return (
         <div>

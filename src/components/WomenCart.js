@@ -98,8 +98,7 @@ const WomenCart = ({ id, names, images, prices, count, size }) => {
                         <div className="image-section">
                             <div className="inner-image-section">
                                 <img src={`../../images/${images}`}
-                                    alt="pop" width="200px"
-                                    height="100px" className='checkout-image' />
+                                    alt="pop" className='checkout-image' />
                             </div>
                         </div>
                         <div className="info-section">
@@ -110,6 +109,7 @@ const WomenCart = ({ id, names, images, prices, count, size }) => {
                                 </div>
                             </div>
                         </div>
+
                         <div className="quantity-section">
                             <div className="inner-quantity-section">
                                 <WomenCountButtons
@@ -117,11 +117,13 @@ const WomenCart = ({ id, names, images, prices, count, size }) => {
                                     increase={increase}
                                     decrease={decrease}
                                 />
-                                <div className="inner-delete-section">
-                                    <Link to={'.'} onClick={() => deleteWomanProduct(id)}>
-                                        <WomanItemDelete />
-                                    </Link>
-                                </div>
+                            </div>
+                        </div>
+                        <div className="delete-section">
+                            <div className="inner-delete-section">
+                                <Link to={'.'} onClick={() => deleteWomanProduct(id)}>
+                                    <WomanItemDelete />
+                                </Link>
                             </div>
                         </div>
 

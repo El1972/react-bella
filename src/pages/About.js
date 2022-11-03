@@ -24,7 +24,7 @@ const About = () => {
             <div className="about-container">
                 <div className="about-inner-container">
 
-                    <div className="first-section-image-wrapper clearfix">
+                    <div className="first-wrapper clearfix">
                         <div className="first-section-image-container">
                             <div className="first-section-image">
                                 <img src="./../images/6335ab70a0a8d1.74631122.jpeg"
@@ -36,7 +36,7 @@ const About = () => {
 
                                 <div className='first-text'>
                                     <h1 className='about-heading-one'>BELLA: CREATED ESPECIALLY FOR YOU!</h1>
-                                    <h4>Imagine the perfect shoes ...</h4>
+                                    <h4 className='imagine-heading'>Imagine the perfect shoes ...</h4>
                                     <p className='about-first-paragraph'>Handmade from luxurious leather, with a stunning design in the exact
                                         color with ideal height and size that fits you perfectly ...
                                         Now imagine that in order to have them, there is no need to spend
@@ -50,19 +50,23 @@ const About = () => {
 
                     <div className="middle-statement-container">
                         <div className="middle-statement-properties">
-                            <div className="sewing-container">
-                                <div className="inner-sewing-container">
-                                    <SewingNeedle className="sewing-needle" />
+                            <div className="sewing-wrapper">
+                                <div className="sewing-container">
+                                    <div className="inner-sewing-container">
+                                        <SewingNeedle className="sewing-needle" />
+                                    </div>
                                 </div>
                             </div>
-                            <p className='middle-statement-one'>
-                                We were united by the idea that shoes should <br />
-                                reflect the personality of its owner...
-                            </p>
+                            <div className="statement-container">
+                                <p className='middle-statement-one'>
+                                    We were united by the idea that shoes should <br />
+                                    reflect the personality of its owner...
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="clearfix">
+                    <div className="second-wrapper clearfix">
                         <div className="second-section-image-container">
                             <div className="second-section-image">
                                 <img src="./../images/6335abfda9db11.54886465.jpeg"
@@ -104,44 +108,46 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="clearfix">
-                        <div className="third-section-text-container">
-                            <div className="third-section-text">
-                                <div className='third-text'>
-                                    <h1 className='about-heading-three'>THE PHILOSOPHY</h1>
-                                    <p className='about-third-paragraph'>OUR PHILOSOPHY IS TO BE UNIQUE - ONE AND ONLY...</p>
-                                    <br />
-                                    <p className='philosophy-sub-text'>And here is how we achieve it:</p>
-                                    <ul className='dotted-list'>
-                                        <li>
-                                            We rely on the rich Italian tradition of manufacturing luxury shoes and the unmatched
-                                            style from the Mecca of fashion.
-                                        </li>
-                                        <li>Our models are unique, made by hand, exclusively for you.</li>
-                                        <li>Our design always corresponds exactly to your wishes, to the smallest detail.</li>
-                                        <li>Quality is always our best and strictly controlled at every stage of shoe production.</li>
-                                        <li>We work only with specially selected first-class leather and materials safe for health and
-                                            the environment.</li>
-                                        <li>  We offer the most affordable custom shoes on
-                                            the market - with prices twice lower than the
-                                            average for the segment, furthermore - with
-                                            some of the shortest deadlines for
-                                            production and delivery.</li>
-                                    </ul>
+                    <div className="third-wrapper clearfix">
+                        <div className="inner-wrapper">
+                            <div className="third-section-text-container">
+                                <div className="third-section-text">
+                                    <div className='third-text'>
+                                        <h1 className='about-heading-three'>THE PHILOSOPHY</h1>
+                                        <p className='about-third-paragraph'>OUR PHILOSOPHY IS TO BE UNIQUE - ONE AND ONLY...</p>
+                                        <br />
+                                        <p className='philosophy-sub-text'>And here is how we achieve it:</p>
+                                        <ul className='dotted-list'>
+                                            <li>
+                                                We rely on the rich Italian tradition of manufacturing luxury shoes and the unmatched
+                                                style from the Mecca of fashion.
+                                            </li>
+                                            <li>Our models are unique, made by hand, exclusively for you.</li>
+                                            <li>Our design always corresponds exactly to your wishes, to the smallest detail.</li>
+                                            <li>Quality is always our best and strictly controlled at every stage of shoe production.</li>
+                                            <li>We work only with specially selected first-class leather and materials safe for health and
+                                                the environment.</li>
+                                            <li>  We offer the most affordable custom shoes on
+                                                the market - with prices twice lower than the
+                                                average for the segment, furthermore - with
+                                                some of the shortest deadlines for
+                                                production and delivery.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="third-section-image-container">
-                            <div className="third-section-image">
-                                <img src="./../images/6335ac1b5b0470.11256588.jpeg"
-                                    alt="" className='third-image' />
+                            <div className="third-section-image-container">
+                                <div className="third-section-image">
+                                    <img src="./../images/6335ac1b5b0470.11256588.jpeg"
+                                        alt="" className='third-image' />
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

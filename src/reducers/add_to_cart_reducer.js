@@ -72,16 +72,16 @@ const add_to_cart_reducer = (state, action) => {
         const { id, names, images, size, prices, data } = action.payload; // destructuring from: action.payload
         const { count, stock, amount, code } = data
 
-        // let { us, uk, eu } = size
+        let { us, uk, eu } = size
 
-        // const t = [];
-        // t.push(us, uk, eu)
+        const t = [];
+        t.push(us, uk, eu)
 
-        // const result = t.filter((shoeSize) => {
-        //     return shoeSize !== undefined
-        // })
+        const result = t.filter((shoeSize) => {
+            return shoeSize !== undefined
+        })
 
-        // let [shoeSize] = result
+        let [shoeSize] = result
 
         const tempObj = state.woman_cart.find((c) => {
             return c.id === id + code
@@ -105,7 +105,7 @@ const add_to_cart_reducer = (state, action) => {
                 id: id + code,
                 names,
                 images,
-                // size: shoeSize,
+                size: shoeSize,
                 prices: parseInt(prices),
                 count: parseInt(count),
                 stock: parseInt(stock),

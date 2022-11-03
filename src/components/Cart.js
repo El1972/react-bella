@@ -67,8 +67,7 @@ const Cart = ({ id, names, images, count, size, prices }) => {
                         <div className="image-section">
                             <div className="inner-image-section">
                                 <img src={`../../images/${images}`}
-                                    alt="pop" width="200px"
-                                    height="100px" className='checkout-image' />
+                                    alt="pop" className='checkout-image' />
                             </div>
                         </div>
                         <div className="info-section">
@@ -86,11 +85,13 @@ const Cart = ({ id, names, images, count, size, prices }) => {
                                     increase={increase}
                                     decrease={decrease}
                                 />
-                                <div className="inner-delete-section">
-                                    <Link to={'.'} onClick={() => deleteProduct(id)}>
-                                        <ItemDelete />
-                                    </Link>
-                                </div>
+                            </div>
+                        </div>
+                        <div className="delete-section">
+                            <div className="inner-delete-section">
+                                <Link to={'.'} onClick={() => deleteProduct(id)}>
+                                    <ItemDelete />
+                                </Link>
                             </div>
                         </div>
 

@@ -63,7 +63,7 @@ const Contact = () => {
                     <div className="complaints-notice-measures">
                         <div className="complaints-notice-properties">
                             <p className='complaints-notice'> If you have any suggestions or complaints you can send them directly to our management team: </p><br />
-                            <p className='complaints-notice-two'>management@girotti.com</p>
+                            <p className='complaints-notice-two'>management@bella.com</p>
                         </div>
                     </div>
 
@@ -107,25 +107,25 @@ const Contact = () => {
                         <div className="payment-columns-measure">
                             <div className="payment-columns-qualities">
                                 <i><BsLock className='lock' /></i>
-                                <p className='columns'>Safe, Fast & Secure Payments in your Local Currency</p>
+                                <p className='columns'>Secure Payments in your <br /> Local Currency</p>
                             </div>
                         </div>
                         <div className="express-columns-measure">
                             <div className="express-columns-qualities">
                                 <i><BsTruck className='truck' /></i>
-                                <p className='columns'>Free Express Delivery over £50</p>
+                                <p className='columns'>Free Express Delivery <br /> over £50</p>
                             </div>
                         </div>
                         <div className="returns-columns-measure">
                             <div className="returns-columns-qualities">
                                 <i><BsArrowRepeat className='returns' /></i>
-                                <p className='columns'>International Returns & Exchanges</p>
+                                <p className='columns'>International Returns <br /> & Exchanges</p>
                             </div>
                         </div>
                         <div className="contact-columns-measure">
                             <div className="contact-columns-qualities">
                                 <i><BsChatSquareText className='contact-icon' /></i>
-                                <p className='columns'>You Can Contact Us Anytime, Anywhere</p>
+                                <p className='columns'>You Can Contact Us Anytime <br /> Anywhere</p>
                             </div>
                         </div>
                     </div>

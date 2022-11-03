@@ -29,15 +29,15 @@ const filter_reducer = (state, action) => {
 
         let tempItems = [...items];
 
-        if (sort !== 'highest price') {
+        if (sort === 'highest price') {
             tempItems = tempItems.sort((a, b) =>
-                b.prices - a.prices
+                a.prices - b.prices
             )
         }
 
-        if (sort !== 'lowest price') {
+        if (sort === 'lowest price') {
             tempItems = tempItems.sort((a, b) =>
-                a.prices - b.prices
+                b.prices - a.prices
             )
         }
 
@@ -59,24 +59,74 @@ const filter_reducer = (state, action) => {
         return { ...state, filters: { ...state.filters, [name]: value } }
     }
 
+
     if (action.type === 'FILTER_ITEMS') {
         const { items } = state
-        const { toggle, choose, colors, artists } = state.filters
+        const { toggle, choose, all_shoes, colors, artists } = state.filters
 
         let itemFilters = [...items] // always starting with fresh set 
         // of data to filter
 
-        if (toggle !== 'leather') {
-            itemFilters = itemFilters.filter((l) => {
-                return l.leather === "0"
+
+
+        // !!!  Radio Buttons Functionality Is Working. Just Uncomment It  !!!
+
+
+
+        // if (toggle === 'oxford') {
+        //     itemFilters = itemFilters.filter((i) => {
+        //         return i.oxford === toggle
+        //     })
+        // }
+
+        // if (toggle === 'derby') {
+        //     itemFilters = itemFilters.filter((i) => {
+        //         return i.derby === toggle
+        //     })
+        // }
+
+        if (all_shoes === 'All Shoes') {
+            itemFilters = itemFilters.filter((i) => {
+                return i.all_shoes === '1'
             })
         }
 
-        if (choose !== 'laces') {
-            itemFilters = itemFilters.filter((l) => {
-                return l.laces === "0"
+        if (all_shoes === 'Leather') {
+            itemFilters = itemFilters.filter((i) => {
+                return i.leather === '1'
             })
         }
+
+        if (all_shoes === 'Suede') {
+            itemFilters = itemFilters.filter((i) => {
+                return i.suede === '1'
+            })
+        }
+
+        if (all_shoes === 'Laces') {
+            itemFilters = itemFilters.filter((i) => {
+                return i.laces === '1'
+            })
+        }
+
+        if (all_shoes === 'Laceless') {
+            itemFilters = itemFilters.filter((i) => {
+                return i.laceless === '1'
+            })
+        }
+
+
+        // if (toggle !== 'leather') {
+        //     itemFilters = itemFilters.filter((l) => {
+        //         return l.leather === "0"
+        //     })
+        // }
+
+        // if (choose !== 'laces') {
+        //     itemFilters = itemFilters.filter((l) => {
+        //         return l.laces === "0"
+        //     })
+        // }
 
         if (colors !== "select color") {
             itemFilters = itemFilters.filter((item) => {
@@ -92,6 +142,7 @@ const filter_reducer = (state, action) => {
 
         return { ...state, filtered_items: itemFilters }
     }
+
 
     // -------------------- End Of Filtering By Color & Designer -------------------
 
@@ -144,26 +195,77 @@ const filter_reducer = (state, action) => {
 
     if (action.type === 'WOMEN_FILTER_ITEMS') {
         const { women_items } = state
-        const { toggle, women_choose, colors, artists } = state.filters
+        const { toggle, choose, women_shoes, colors, artists } = state.filters
 
         let women_itemFilters = [...women_items] // always starting with fresh set 
         // of data to filter
 
-        if (toggle !== 'leather') {
-            women_itemFilters = women_itemFilters.filter((l) => {
-                return l.leather === "0"
+
+
+        // !!!  Radio Buttons Functionality Is Working. Just Uncomment It  !!!
+
+
+
+        // if (toggle === 'oxford') {
+        //     itemFilters = itemFilters.filter((i) => {
+        //         return i.oxford === toggle
+        //     })
+        // }
+
+        // if (toggle === 'derby') {
+        //     itemFilters = itemFilters.filter((i) => {
+        //         return i.derby === toggle
+        //     })
+        // }
+
+
+
+        if (women_shoes === 'All Shoes') {
+            women_itemFilters = women_itemFilters.filter((i) => {
+                return i.women_shoes === '1'
             })
         }
 
-        if (women_choose !== 'laceless') {
-            women_itemFilters = women_itemFilters.filter((l) => {
-                return l.laces === "0"
+        if (women_shoes === 'Leather') {
+            women_itemFilters = women_itemFilters.filter((i) => {
+                return i.leather === '1'
             })
         }
+
+        if (women_shoes === 'Suede') {
+            women_itemFilters = women_itemFilters.filter((i) => {
+                return i.suede === '1'
+            })
+        }
+
+        if (women_shoes === 'Laces') {
+            women_itemFilters = women_itemFilters.filter((i) => {
+                return i.laces === '1'
+            })
+        }
+
+        if (women_shoes === 'Laceless') {
+            women_itemFilters = women_itemFilters.filter((i) => {
+                return i.laceless === '1'
+            })
+        }
+
+
+        // if (toggle !== 'leather') {
+        //     itemFilters = itemFilters.filter((l) => {
+        //         return l.leather === "0"
+        //     })
+        // }
+
+        // if (choose !== 'laces') {
+        //     itemFilters = itemFilters.filter((l) => {
+        //         return l.laces === "0"
+        //     })
+        // }
 
         if (colors !== "select color") {
-            women_itemFilters = women_itemFilters.filter((women_item) => {
-                return women_item.colors === colors
+            women_itemFilters = women_itemFilters.filter((item) => {
+                return item.colors === colors
             })
         }
 
@@ -172,8 +274,10 @@ const filter_reducer = (state, action) => {
                 return design.designers === artists
             })
         }
+
         return { ...state, women_filtered_items: women_itemFilters }
     }
+
 
     // -------------------- End Of Filtering By Color & Designer -------------------
 
