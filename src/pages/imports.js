@@ -27,6 +27,7 @@ import Youtube from '../components/Youtube';
 
 
 
+
 // pages
 import Home from './Home';
 import Women from './Women';
@@ -45,6 +46,7 @@ export {
     WomenSidebar, Heart, Message, Pencil,
     QuestionIcon, Phone, Facebook, Twitter,
     Instagram, Pinterest, Youtube,
+
 
 
 

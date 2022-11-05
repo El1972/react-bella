@@ -6,6 +6,7 @@ import { useAddToCartContext } from '../context/add_to_cart_context';
 import { useProductsContext } from '../context/products_context';
 import SingleItem from '../pages/SingleItem';
 import { getConfig } from '@testing-library/react';
+import { motion, AnimatePresence } from 'framer-motion'
 
 
 
@@ -159,12 +160,16 @@ const Modal = () => {
                                     <div className="inner-sizes-container">
                                         {sizes.map((s, index) => {
                                             return (
-                                                <button key={index}
-                                                    className={`size-button ${s === setSize ? ' active' : null}`}
-                                                    onClick={() => setSetSize(s)}
-                                                >
-                                                    {s.us}
-                                                </button>
+                                                <AnimatePresence>
+                                                    <motion.button
+                                                        className={`size-button ${s === setSize ? ' active' : null}`}
+                                                        key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                                                        exit={{ opacity: 0 }}
+                                                        onClick={() => setSetSize(s)}
+                                                    >
+                                                        {s.us}
+                                                    </motion.button>
+                                                </AnimatePresence>
                                             )
                                         })}
                                     </div>

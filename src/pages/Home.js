@@ -4,13 +4,14 @@ import { FaChevronDown } from 'react-icons/fa';
 import { Sidebar } from './imports'
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import { motion, AnimatePresence } from 'framer-motion'
 
 //  - 855
 
 const Home = () => {
 
     let { filtered_items } = useFiltersContext();
-    console.log(filtered_items);
+
     return (
         <div>
             <div className="main-header-wrapper">
@@ -35,21 +36,27 @@ const Home = () => {
                             <div className="image-container" key={index}>
                                 <div className='image-width' key={id}>
                                     <Link to={`product/${i.id}`}>
-                                        <div className="image-float">
-                                            <div className="image-properties">
-                                                <div className='shoes-images'>
-                                                    <div className="shoe-container">
-                                                        <img src={`../../images/${images}`}
-                                                            alt="" className='shoe-one' />
-                                                    </div>
-                                                    <div className="image-info-container">
-                                                        <p className='image-bestsellers'>{bestsellers}</p>
-                                                        <p className='image-names'>{names}</p>
-                                                        <p className='image-prices'>${prices}</p>
+                                        <AnimatePresence>
+                                            <motion.div
+                                                initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                whileHover={{ scale: 1.2 }}
+                                                className="image-float">
+                                                <div className="image-properties">
+                                                    <div className='shoes-images'>
+                                                        <div className="shoe-container">
+                                                            <img src={`../../images/${images}`}
+                                                                alt="" className='shoe-one' />
+                                                        </div>
+                                                        <div className="image-info-container">
+                                                            <p className='image-bestsellers'>{bestsellers}</p>
+                                                            <p className='image-names'>{names}</p>
+                                                            <p className='image-prices'>${prices}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </motion.div>
+                                        </AnimatePresence>
                                     </Link>
                                 </div>
                             </div>

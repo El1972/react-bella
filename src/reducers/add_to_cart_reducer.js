@@ -315,8 +315,6 @@ const add_to_cart_reducer = (state, action) => {
 
         both_carts_amounts_total = amounts_count + woman_amounts_count
 
-        console.log(both_carts_items_total, both_carts_amounts_total);
-
         return { ...state, both_carts_items_total, both_carts_amounts_total }
     }
 
