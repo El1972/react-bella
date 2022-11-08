@@ -23,7 +23,7 @@ const Home = () => {
                 <div className="sub-header-container">
                     <p className='sub-header-itself'>
                         Home<FaChevronDown className='chevron-right' />
-                        Men's' Shoes</p>
+                        Men's Shoes</p>
                 </div>
             </div>
             <Hero />

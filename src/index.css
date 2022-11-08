@@ -2322,7 +2322,7 @@ button.descrease-button {
 .third-section-text {
     height: 533px;
     line-height: 533px;
-
+    padding: 40px 0px;
 }
 
 .third-text {
@@ -2890,32 +2890,44 @@ div.footer-social {
         display: none;
     } */
 
+    div.sidebar-items {
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .sidebar-float {
+        width: 100%;
+    }
+
     /* div.price-section, */
     .price-section {
-        display: inline-block;
+        display: block;
         width: 100%;
         text-align: center;
-        margin: 0px;
-        padding: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .color-section {
-        display: inline-block;
+        display: block;
         width: 100%;
         text-align: center;
         margin-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .designer-section {
-        display: inline-block;
+        display: block;
         width: 100%;
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
-    .sidebar-parent,
-    .sidebar-float {
-        width: 100%;
+    div#sidebar-parent {
+        min-width: 0px;
     }
 
     form,
@@ -2925,7 +2937,13 @@ div.footer-social {
 
     div.sidebar-properties {
         min-height: 350px;
+        /* width: 280px; */
+        padding-right: 0px;
     }
+
+
+
+    /* -------------- Mobile-Home Component -------------- */
 
     div.image-float {
         width: 100%;
@@ -2933,18 +2951,12 @@ div.footer-social {
         text-align: center;
     }
 
-    div.image-properties {
-        padding: 34px 40px;
-        height: 350px;
-        background-color: #FFFFFF;
-    }
-
-    .shoe-container {
-        height: 180.15px;
+    div.shoe-container {
+        height: auto;
     }
 
     .shoe-one {
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .clearfix::after,
@@ -2954,16 +2966,9 @@ div.footer-social {
         content: '';
     }
 
-    /* -------------- Mobile-Home Component -------------- */
-
-
-    .shoe-container {
-        height: 137.15px;
-    }
-
-    div .image-properties {
-        padding: 34px 40px;
-        height: 274px;
+    div.image-properties {
+        padding: 20px 40px;
+        height: auto;
         background-color: #FFFFFF;
     }
 
@@ -3113,7 +3118,7 @@ div.footer-social {
 
     .about-first-paragraph {
         width: 100%;
-        text-align: center;
+        text-align: left;
         display: block;
     }
 
@@ -3191,6 +3196,7 @@ div.footer-social {
         /* display: inline-block;
         vertical-align: middle;
         line-height: normal; */
+        padding: 20px 0px;
     }
 
     .inner-wrapper {
@@ -3198,7 +3204,7 @@ div.footer-social {
     }
 
     p.about-second-paragraph {
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
 
@@ -3217,6 +3223,7 @@ div.footer-social {
         height: auto;
         /* line-height: 733px; */
         width: 100%;
+        padding: 10px 0px;
     }
 
     p.third-text {
@@ -3545,7 +3552,7 @@ div.footer-social {
         color: #FC596B;
         font-size: 16px;
         margin-right: 6px;
-        left: 181.6px;
+        left: 187.6px;
         top: -21.2px;
         rotate: -2.5deg;
     }
@@ -3753,13 +3760,13 @@ div.footer-social {
     .footer-column-one-styling li,
     .footer-column-two-styling li,
     .footer-column-three-styling li {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .footer-column-one-styling .footer-header,
     .footer-column-two-styling .footer-header,
     .footer-column-three-styling .footer-header {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .stay-updated {
@@ -3892,8 +3899,8 @@ div.footer-social {
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin: 0px;
-        padding: 0px;
+        margin-bottom: 0px;
+        /* padding: 30px 0px; */
     }
 
     .color-section {
@@ -3907,7 +3914,7 @@ div.footer-social {
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: 30px;
     }
 
     .sidebar-parent,
@@ -5931,14 +5938,14 @@ div.footer-social {
     .price-section {
         text-align: left;
         padding: 30px 40px 0px;
-        margin: 30px 0px;
+        margin: 45px 0px;
         display: inline-block;
     }
 
     .color-section {
         text-align: left;
         padding: 30px 40px 0px;
-        margin: 30px 0px;
+        margin: 45px 0px;
         display: inline-block;
 
     }
@@ -5946,7 +5953,7 @@ div.footer-social {
     .designer-section {
         text-align: left;
         padding: 30px 40px 0px;
-        margin: 30px 0px;
+        margin: 45px 0px;
         display: inline-block;
     }
 
