@@ -82,7 +82,7 @@ const Products = () => {
                             <div className="bottom-line"></div>
                             <div className="total-price-container clearfix">
                                 <div className="inner-total-price-container">
-                                    <h4>
+                                    <h4 className='total-price'>
                                         Total Price:   ${both_carts_amounts_total}.00
                                     </h4>
                                 </div>

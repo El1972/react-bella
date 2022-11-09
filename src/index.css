@@ -1892,12 +1892,12 @@ p.single-info-description {
 
 .product-name {
     display: inline-block;
-    width: 52%;
+    width: 44%;
     text-align: center;
 }
 
 .quantity {
-    width: 6%;
+    width: 14%;
     text-align: center;
     display: inline-block;
 }
@@ -1925,8 +1925,13 @@ p.single-info-description {
     font-family: 'helveticaneuelight';
 }
 
+.total-price {
+    font-size: 15px;
+    font-family: 'helveticaneuelight';
+}
+
 .bottom-line {
-    border-bottom: 1px solid rgb(201, 201, 201);
+    border-bottom: .5px solid #c1c1c1;
 }
 
 .clear-all-container {
@@ -1995,7 +2000,8 @@ p.single-info-description {
 .inner-info-section {
     height: 160px;
     line-height: 160px;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .info-wrapper {
@@ -2026,7 +2032,7 @@ p.single-info-description {
     height: 160px;
     line-height: 160px;
     text-align: left;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 div.delete-can {
@@ -2206,8 +2212,8 @@ button.descrease-button {
 }
 
 .first-section-text {
-    height: 313px;
-    line-height: 313px;
+    height: 331.13px;
+    line-height: 331.13px;
 }
 
 .first-text {
@@ -2300,8 +2306,8 @@ button.descrease-button {
 }
 
 .second-section-text {
-    height: 575.625px;
-    line-height: 575.625px;
+    height: 554.03px;
+    line-height: 554.03px;
 }
 
 .second-text {
@@ -2322,7 +2328,6 @@ button.descrease-button {
 .third-section-text {
     height: 533px;
     line-height: 533px;
-    padding: 40px 0px;
 }
 
 .third-text {
@@ -2976,23 +2981,45 @@ div.footer-social {
         width: 49%;
     }
 
+    /* -------------- Mobile-Product Component -------------- */
+
+    .total-price-container {
+        width: 29.7%;
+        float: right;
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'helveticaneuelight';
+    }
+
+    .total-price {
+        font-size: 13px;
+        font-family: 'helveticaneuelight';
+    }
+
     /* -------------- Mobile-Cart Component -------------- */
 
 
     .checkout-image {
-        max-width: 15vw;
+        max-width: 20vw;
         height: 42px;
-        margin-left: 4px;
+        margin-left: 2px;
     }
 
     .image-section {
-        width: 19vw;
+        width: 25vw;
         float: left;
     }
 
     .info-section {
-        width: 30vw;
+        width: 24vw;
         float: left;
+    }
+
+    .inner-info-section {
+        height: 160px;
+        line-height: 160px;
+        text-align: left;
+        padding-left: 10px;
     }
 
     .info-wrapper {
@@ -4614,7 +4641,7 @@ div.footer-social {
     .first-section-text {
         height: 275px;
         text-align: left;
-        padding: 0px 60px;
+        padding: 0px 66.9922px;
     }
 
     .first-text {
@@ -4706,7 +4733,7 @@ div.footer-social {
     .second-section-text {
         height: 545.625px;
         text-align: left;
-        padding: 0px 60px;
+        padding: 0px 66.9922px;
     }
 
     .second-text {
@@ -4724,7 +4751,7 @@ div.footer-social {
     .third-section-text {
         height: 533px;
         text-align: left;
-        padding: 0px 60px;
+        padding: 0px 66.9922px;
     }
 
     .third-text {
@@ -4765,6 +4792,12 @@ div.footer-social {
     .about-third-paragraph {
         padding-top: 16px;
         font-family: 'helveticaneuelight';
+    }
+
+    /* ----------- Product --------- */
+
+    .inner-clear-all-container {
+        text-align: center;
     }
 
     /* ----------- Cart --------- */
@@ -4919,6 +4952,12 @@ div.footer-social {
         text-align: left;
     }
 
+    /* ----------- Tablet-Product Component --------- */
+
+    .inner-clear-all-container {
+        text-align: center;
+    }
+
     /* -------------- Tablet-Cart Component -------------- */
 
     .checkout-image {
@@ -5034,7 +5073,7 @@ div.footer-social {
     .first-section-text {
         height: 275px;
         text-align: left;
-        padding: 0px 60px;
+        padding: 0px 87.3438px;
     }
 
     .first-text {
@@ -5126,7 +5165,7 @@ div.footer-social {
     .second-section-text {
         height: 545.625px;
         text-align: left;
-        padding: 0px 60px;
+        padding: 0px 87.3438px;
     }
 
     .second-text {
@@ -5144,7 +5183,7 @@ div.footer-social {
     .third-section-text {
         height: 533px;
         text-align: left;
-        padding: 0px 60px;
+        padding: 0px 87.3438px;
     }
 
     .third-text {
@@ -5913,6 +5952,98 @@ div.footer-social {
         display: inline-block;
     }
 
+    /* -------- Products --------- */
+
+    .inner-clear-all-container {
+        text-align: center;
+    }
+
+    /* ------- About --------- */
+
+
+    .first-section-image-container {
+        /* float: left; */
+        width: 100%;
+    }
+
+    .first-image {
+        display: block;
+        width: 78%;
+        margin: 0 auto;
+    }
+
+    .first-section-text-container {
+        width: 100%;
+    }
+
+    .first-section-text {
+        height: 215px;
+        line-height: 215px;
+        text-align: left;
+        padding: 0px 87.3438px;
+    }
+
+    .second-section-image-container {
+        /* float: left; */
+        width: 100%;
+    }
+
+    .second-image {
+        display: block;
+        width: 78%;
+        margin: 0 auto;
+    }
+
+    .second-section-text-container {
+        width: 100%;
+    }
+
+    .second-section-text {
+        height: 435px;
+        line-height: 435px;
+        text-align: left;
+        padding: 0px 87.3438px;
+    }
+
+    .middle-statement-properties {
+        background-color: #F1F1F1;
+        text-align: center;
+        min-height: 170px;
+        padding: 10px 0px;
+        margin: 30px 0px;
+    }
+
+    .third-section-image-container {
+        /* float: right; */
+        width: 100%;
+    }
+
+    .third-section-image {
+        text-align: center;
+        height: 533px;
+
+    }
+
+    .third-image {
+        display: inline-block;
+    }
+
+    .third-section-text-container {
+        width: 100%;
+    }
+
+    .third-section-text {
+        height: 435px;
+        line-height: 435px;
+        text-align: left;
+        padding: 0px 87.3438px;
+    }
+
+    .about-third-paragraph {
+        padding-top: 16px;
+        font-family: 'helveticaneuelight';
+    }
+
 }
 
 
@@ -6022,6 +6153,89 @@ div.footer-social {
     }
 
     /* ---------- About --------- */
+
+    .first-section-image-container {
+        /* float: left; */
+        width: 100%;
+    }
+
+    .first-image {
+        display: block;
+        width: 78%;
+        margin: 0 auto;
+    }
+
+    .first-section-text-container {
+        width: 100%;
+    }
+
+    .first-section-text {
+        height: 215px;
+        line-height: 215px;
+        text-align: left;
+        padding: 0px 87.3438px;
+    }
+
+    .second-section-image-container {
+        /* float: left; */
+        width: 100%;
+    }
+
+    .second-image {
+        display: block;
+        width: 78%;
+        margin: 0 auto;
+    }
+
+    .second-section-text-container {
+        width: 100%;
+    }
+
+    .second-section-text {
+        height: 435px;
+        line-height: 435px;
+        text-align: left;
+        padding: 0px 87.3438px;
+    }
+
+    .middle-statement-properties {
+        background-color: #F1F1F1;
+        text-align: center;
+        min-height: 170px;
+        padding: 10px 0px;
+        margin: 30px 0px;
+    }
+
+    .third-section-image-container {
+        /* float: right; */
+        width: 100%;
+    }
+
+    .third-section-image {
+        text-align: center;
+        height: 533px;
+
+    }
+
+    .third-image {
+        display: inline-block;
+    }
+
+    .third-section-text-container {
+        width: 100%;
+    }
+
+    .third-section-text {
+        height: 435px;
+        line-height: 435px;
+        text-align: left;
+        padding: 0px 87.3438px;
+    }
+
+    .about-third-paragraph {
+        padding-top: 16px;
+        font-family: 'helveticaneuelight';
+    }
 
     .checkout-image {
         max-width: 18vw;
@@ -6141,6 +6355,12 @@ div.footer-social {
         float: left;
     }
 
+    /* -------- Products --------- */
+
+    .inner-clear-all-container {
+        text-align: center;
+    }
+
     /* ---------------- Contact --------------- */
 
     .columns {
@@ -6191,7 +6411,7 @@ div.footer-social {
     }
 
 
-    /* Tablet-Header Component--------------- */
+    /* -------- Tablet-Header Component--------------- */
 
 
     .login-cart-container {
@@ -6331,7 +6551,7 @@ div.footer-social {
         color: #888888;
     }
 
-    /* Tablet-Home Component--------------- */
+    /* -------- Tablet-Home Component--------------- */
 
     .image-float {
         float: left;
@@ -6339,8 +6559,22 @@ div.footer-social {
         padding-left: 15%;
     }
 
+    /* -------- Tablet-Products Component --------- */
+
+    .inner-clear-all-container {
+        text-align: center;
+    }
+
 }
 
-/* @media (min-width: 861px) and (max-width: 1200px) {}
+@media (min-width: 1051px) and (max-width: 1171px) {
 
-@media (min-width: 1201px) and (max-width: 3256px) {} */
+    /* -------- Tablet-Products Component --------- */
+
+    .inner-clear-all-container {
+        text-align: center;
+    }
+
+}
+
+/* @media (min-width: 1201px) and (max-width: 3256px) {} */

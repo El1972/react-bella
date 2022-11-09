@@ -51,8 +51,18 @@ export const AddToCartProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(add_to_cart_reducer, mainState)
 
-    const fetchSizes = async () => {
+    const fetchModalSizes = async () => {
         const response = await axios.get('http://localhost:8888/sizes.php')
+        const products = response.data
+        dispatch({ type: 'FETCH_SIZES', payload: products })
+    }
+
+    useEffect(() => {
+        fetchModalSizes()
+    }, [])
+
+    const fetchSizes = async () => {
+        const response = await axios.get('https://www.bella-shoes.com/sizes.php')
         const measures = response.data
 
         dispatch({ type: 'FETCH_SIZES', payload: measures })
@@ -64,7 +74,7 @@ export const AddToCartProvider = ({ children }) => {
 
 
     const fetchDescriptions = async () => {
-        const response = await axios.get('http://localhost:8888/descriptions.php')
+        const response = await axios.get('https://www.bella-shoes.com/descriptions.php')
         const description = response.data
 
         dispatch({ type: 'FETCH_DESCRIPTIONS', payload: description })
@@ -76,7 +86,7 @@ export const AddToCartProvider = ({ children }) => {
 
 
     const fetchWomenDescriptions = async () => {
-        const response = await axios.get('http://localhost:8888/women_descriptions.php')
+        const response = await axios.get('https://www.bella-shoes.com/women_descriptions.php')
         const women_description = response.data
 
         dispatch({ type: 'FETCH_WOMEN_DESCRIPTIONS', payload: women_description })
@@ -161,7 +171,7 @@ export const AddToCartProvider = ({ children }) => {
     return (
         <AddToCartContext.Provider value={{
             ...state,
-            fetchSizes,
+            fetchModalSizes,
             addToCart,
             adjustWomenCart,
             womanAddToCart,

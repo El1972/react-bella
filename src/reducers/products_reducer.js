@@ -1,4 +1,6 @@
 
+// ------------------------ Men ---------------------------
+
 
 import { useProductsContext } from "../context/products_context"
 
@@ -14,7 +16,6 @@ const products_reducer = (state, action) => {
         return { ...state, single_product: action.payload }
     }
 
-
     // ------------------------ Women ---------------------------
 
 
@@ -27,7 +28,6 @@ const products_reducer = (state, action) => {
     if (action.type === 'WOMEN_FETCH_SINGLE_PRODUCT') {
         return { ...state, women_single_product: action.payload }
     }
-
 
     // ------------------------ Random ---------------------------
 

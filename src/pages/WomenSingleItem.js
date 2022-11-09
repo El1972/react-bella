@@ -12,7 +12,6 @@ import { Heart, Message, Pencil, QuestionIcon } from './imports';
 const WomenSingleItem = () => {
 
     const { women_single_product, womenfetchSingleProduct } = useProductsContext()
-    const { women_descriptions } = useAddToCartContext()
 
 
     const [modalOpen, setModalOpen] = useState(false)
@@ -31,14 +30,9 @@ const WomenSingleItem = () => {
         return p.id === id
     })
 
-    const women_info = women_descriptions.find((p) => {
-        return p.id === id
-    })
+    const { id: identity, names, images, prices, crossed_price,
+        descriptions, one, two, three, four, five, six } = data || undefined || {}
 
-    const { id: identity, names, images, prices, descriptions, crossed_price } = data || undefined || {}
-
-    const { id: calling, name, description,
-        one, two, three, four, five, six } = women_info || undefined || {}
 
     // End of getting the id to appropriate item in an array of items
 
@@ -175,7 +169,7 @@ const WomenSingleItem = () => {
                                     </div>
                                     <div className="single-info-text-container">
                                         <div className="inner-single-info-text-container">
-                                            <p className='single-info-description'>{description}</p>
+                                            <p className='single-info-description'>{descriptions}</p>
                                             <ul className='single-info-text'>
                                                 <li className='single-info-text-one'>{one}</li>
                                                 <li className='single-info-text-two'>{two}</li>

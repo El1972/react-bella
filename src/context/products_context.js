@@ -19,7 +19,8 @@ export const ProductsProvider = ({ children }) => {
 
 
     const fetchProducts = async () => {
-        const response = await axios.get('http://localhost:8888/men.php')
+        // 'https://www.bella-shoes.com/men.php'
+        const response = await axios.get('https://www.bella-shoes.com/men.php')
         const items = response.data
 
         dispatch({ type: 'FETCH_PRODUCTS', payload: items })
@@ -31,7 +32,7 @@ export const ProductsProvider = ({ children }) => {
 
 
     const fetchSingleProduct = async () => {
-        const response = await axios.get('http://localhost:8888/men.php')
+        const response = await axios.get('https://www.bella-shoes.com/men.php')
         const products = response.data
         dispatch({ type: 'FETCH_SINGLE_PRODUCT', payload: products })
     }
@@ -40,10 +41,11 @@ export const ProductsProvider = ({ children }) => {
         fetchSingleProduct()
     }, [])
 
+
     // ---------------------------- Women ----------------------------
 
     const womenfetchProducts = async () => {
-        const response = await axios.get('http://localhost:8888/women.php')
+        const response = await axios.get('https://www.bella-shoes.com/women.php')
         const women_items = response.data
 
         dispatch({ type: 'WOMEN_FETCH_PRODUCTS', payload: women_items })
@@ -55,7 +57,7 @@ export const ProductsProvider = ({ children }) => {
 
 
     const womenfetchSingleProduct = async () => {
-        const response = await axios.get('http://localhost:8888/women.php')
+        const response = await axios.get('https://www.bella-shoes.com/women.php')
         const women_products = response.data
         dispatch({ type: 'WOMEN_FETCH_SINGLE_PRODUCT', payload: women_products })
     }
@@ -63,20 +65,6 @@ export const ProductsProvider = ({ children }) => {
     useEffect(() => {
         womenfetchSingleProduct()
     }, [])
-
-    // ---------------------------- Random ----------------------------
-
-    const fetchRandom = async () => {
-        const response = await axios.get('http://localhost:8888/random.php')
-        const items = response.data
-
-        dispatch({ type: 'FETCH_RANDOM', payload: items })
-    }
-
-    useEffect(() => {
-        fetchRandom()
-    }, [])
-
 
 
     return (
@@ -90,7 +78,6 @@ export const ProductsProvider = ({ children }) => {
         }}>
             {children}
         </ProductsContext.Provider>
-
 
     )
 
