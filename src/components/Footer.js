@@ -89,41 +89,41 @@ const Footer = () => {
 
                             <div className="facebook-container">
                                 <Link to={'https://www.facebook.com'}>
-                                    <p className='facebook-icon'>
+                                    <span className='facebook-icon'>
                                         <Facebook />
-                                    </p>
+                                    </span>
                                 </Link>
                             </div>
 
                             <div className="twitter-container">
                                 <Link to={'https://twitter.com'}>
-                                    <p className='twitter-icon'>
+                                    <span className='twitter-icon'>
                                         <Twitter />
-                                    </p>
+                                    </span>
                                 </Link>
                             </div>
 
                             <div className="instagram-container">
                                 <Link to={'https://www.instagram.com'}>
-                                    <p className='instagram-icon'>
+                                    <span className='instagram-icon'>
                                         <Instagram />
-                                    </p>
+                                    </span>
                                 </Link>
                             </div>
 
                             <div className="pinterest-container">
                                 <Link to={'https://www.pinterest.com'}>
-                                    <p className='pinterest-icon'>
+                                    <span className='pinterest-icon'>
                                         <Pinterest />
-                                    </p>
+                                    </span>
                                 </Link>
                             </div>
 
                             <div className="youtube-container">
                                 <Link to={'https://www.youtube.com'}>
-                                    <p className='youtube-icon'>
+                                    <span className='youtube-icon'>
                                         <Youtube />
-                                    </p>
+                                    </span>
                                 </Link>
                             </div>
 

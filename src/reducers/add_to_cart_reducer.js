@@ -4,23 +4,28 @@ import { useAddToCartContext } from "../context/add_to_cart_context"
 const add_to_cart_reducer = (state, action) => {
 
 
+
+
     if (action.type === 'FETCH_SIZES') {
         return { ...state, sizes: [...action.payload] }
     }
 
-    if (action.type === 'FETCH_DESCRIPTIONS') {
-        return { ...state, descriptions: [...action.payload] }
-    }
 
-    if (action.type === 'FETCH_WOMEN_DESCRIPTIONS') {
-        return { ...state, women_descriptions: [...action.payload] }
-    }
+
+    // if (action.type === 'FETCH_DESCRIPTIONS') {
+    //     return { ...state, descriptions: [...action.payload] }
+    // }
+
+    // if (action.type === 'FETCH_WOMEN_DESCRIPTIONS') {
+    //     return { ...state, women_descriptions: [...action.payload] }
+    // }
 
 
 
     if (action.type === 'ADD_TO_CART') {
-        const { id, names, images, size, prices, data } = action.payload; // destructuring from: action.payload
-        const { count, stock, amount, code } = data
+        const { id, images, names, count, prices, stock, amount, size } = action.payload; // destructuring from: action.payload
+
+        // console.log(id);
 
         let { us, uk, eu } = size
 
@@ -33,44 +38,58 @@ const add_to_cart_reducer = (state, action) => {
 
         let [shoeSize] = result
 
-        const tempObj = state.cart.find((c) => {
-            return c.id === id + code
-        })
-        if (tempObj) {
-            const tempUnits = state.cart.map((c) => {
-                if (c.id === id + code) {
-                    let renewedCount = parseInt(c.count) + parseInt(count)
-                    if (renewedCount > c.stock) {
-                        renewedCount = c.stock
-                    }
-                    return { ...c, count: parseInt(renewedCount) }
-                } else {
-                    return c
-                }
-            })
-            return { ...state, cart: tempUnits }
-        } else {
-            const newObj = {
-                id: id + code,
-                names,
-                images,
-                size: shoeSize,
-                prices: parseInt(prices),
-                count: parseInt(count),
-                stock: parseInt(stock),
-                amount: parseInt(amount),
-                max: parseInt(stock)
-            }
-            return { ...state, cart: [...state.cart, newObj] }
+        // const tempObj = state.cart.find((c) => {
+        //     return c.id === id
+        // })
+        // if (tempObj) {
+        //     const tempUnits = state.cart.map((c) => {
+        //         if (c.id === id) {
+        //             let renewedCount = parseInt(c.count) + parseInt(count)
+        //             if (renewedCount > c.stock) {
+        //                 renewedCount = c.stock
+        //             }
+        //             return { ...c, count: parseInt(renewedCount) }
+        //         } else {
+        //             return c
+        //         }
+        //     })
+        //     return { ...state, cart: tempUnits }
+        // } else {
+        //     const newObj = {
+        //         id: id,
+        //         names,
+        //         images,
+        //         size: shoeSize,
+        //         prices: parseInt(prices),
+        //         count: parseInt(count),
+        //         stock: parseInt(stock),
+        //         amount: parseInt(amount),
+        //         max: parseInt(stock)
+        //     }
+        //     return { ...state, cart: [...state.cart, newObj] }
+        // }
+
+        const newObj = {
+            id: id,
+            names,
+            images,
+            size: shoeSize,
+            prices: parseInt(prices),
+            count: parseInt(count),
+            stock: parseInt(stock),
+            amount: parseInt(amount),
+            max: parseInt(stock)
         }
+
+        return { ...state, cart: [...state.cart, newObj] }
 
     }
 
 
 
     if (action.type === 'WOMAN_ADD_TO_CART') {
-        const { id, names, images, size, prices, data } = action.payload; // destructuring from: action.payload
-        const { count, stock, amount, code } = data
+        const { id, names, images, size, prices, count, stock, amount, code, data } = action.payload; // destructuring from: action.payload
+
 
         let { us, uk, eu } = size
 

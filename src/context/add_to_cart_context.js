@@ -42,7 +42,7 @@ const mainState = {
     amount: 50
 }
 
-
+console.log(mainState.cart);
 
 const AddToCartContext = React.createContext()
 
@@ -51,8 +51,11 @@ export const AddToCartProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(add_to_cart_reducer, mainState)
 
+
+
     const fetchModalSizes = async () => {
         const response = await axios.get('http://localhost:8888/sizes.php')
+        // const response = await axios.get('https://www.bella-shoes.com/sizes.php')
         const products = response.data
         dispatch({ type: 'FETCH_SIZES', payload: products })
     }
@@ -61,49 +64,59 @@ export const AddToCartProvider = ({ children }) => {
         fetchModalSizes()
     }, [])
 
-    const fetchSizes = async () => {
-        const response = await axios.get('https://www.bella-shoes.com/sizes.php')
-        const measures = response.data
 
-        dispatch({ type: 'FETCH_SIZES', payload: measures })
+
+
+    // const fetchSizes = async () => {
+    //     // const response = await axios.get('http://localhost:8888/sizes.php')
+    //     const response = await axios.get('https://www.bella-shoes.com/sizes.php')
+    //     const measures = response.data
+
+    //     dispatch({ type: 'FETCH_SIZES', payload: measures })
+    // }
+
+    // useEffect(() => {
+    //     fetchSizes()
+    // }, [])
+
+
+
+
+    // const fetchDescriptions = async () => {
+    //     // const response = await axios.get('http://localhost:8888/descriptions.php')
+    //     const response = await axios.get('https://www.bella-shoes.com/descriptions.php')
+    //     const description = response.data
+
+    //     dispatch({ type: 'FETCH_DESCRIPTIONS', payload: description })
+    // }
+
+    // useEffect(() => {
+    //     fetchDescriptions()
+    // }, [])
+
+
+
+    // const fetchWomenDescriptions = async () => {
+    //     // const response = await axios.get('http://localhost:8888/women_descriptions.php')
+    //     const response = await axios.get('https://www.bella-shoes.com/women_descriptions.php')
+    //     const women_description = response.data
+
+    //     dispatch({ type: 'FETCH_WOMEN_DESCRIPTIONS', payload: women_description })
+    // }
+
+    // useEffect(() => {
+    //     fetchWomenDescriptions()
+    // }, [])
+
+
+
+    const addToCart = (id, images, names, count, prices, stock, amount, size) => {
+        dispatch({ type: 'ADD_TO_CART', payload: { id, images, names, count, prices, stock, amount, size } })
     }
 
-    useEffect(() => {
-        fetchSizes()
-    }, [])
 
-
-    const fetchDescriptions = async () => {
-        const response = await axios.get('https://www.bella-shoes.com/descriptions.php')
-        const description = response.data
-
-        dispatch({ type: 'FETCH_DESCRIPTIONS', payload: description })
-    }
-
-    useEffect(() => {
-        fetchDescriptions()
-    }, [])
-
-
-    const fetchWomenDescriptions = async () => {
-        const response = await axios.get('https://www.bella-shoes.com/women_descriptions.php')
-        const women_description = response.data
-
-        dispatch({ type: 'FETCH_WOMEN_DESCRIPTIONS', payload: women_description })
-    }
-
-    useEffect(() => {
-        fetchWomenDescriptions()
-    }, [])
-
-
-    const addToCart = (id, names, images, size, prices, descriptions, data) => {
-        dispatch({ type: 'ADD_TO_CART', payload: { id, names, images, size, prices, descriptions, data } })
-    }
-
-
-    const womanAddToCart = (id, names, images, size, prices, descriptions, data) => {
-        dispatch({ type: 'WOMAN_ADD_TO_CART', payload: { id, names, images, size, prices, descriptions, data } })
+    const womanAddToCart = (id, names, images, size, prices, descriptions, count, stock, data) => {
+        dispatch({ type: 'WOMAN_ADD_TO_CART', payload: { id, names, images, size, prices, descriptions, count, stock, data } })
     }
 
 
@@ -171,7 +184,8 @@ export const AddToCartProvider = ({ children }) => {
     return (
         <AddToCartContext.Provider value={{
             ...state,
-            fetchModalSizes,
+            // fetchModalSizes,
+            // fetchSizes,
             addToCart,
             adjustWomenCart,
             womanAddToCart,

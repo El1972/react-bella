@@ -35,7 +35,7 @@ const Home = () => {
                         return (
                             <div className="image-container" key={index}>
                                 <div className='image-width' key={id}>
-                                    <Link to={`product/${i.id}`}>
+                                    <Link to={`product/${id}`}>
                                         <AnimatePresence>
                                             <motion.div
                                                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}

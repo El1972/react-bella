@@ -12,7 +12,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 const Women = () => {
 
     let { women_filtered_items } = useFiltersContext();
-    console.log(women_filtered_items);
     return (
         <div>
 

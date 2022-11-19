@@ -26,71 +26,11 @@ const WomenModal = () => {
     })
 
 
-    const { id: identity, names, images, prices, descriptions } = data || undefined || {}
+    const { id: identity, names, images, prices, descriptions, count, stock } = data || undefined || {}
 
     const { sizes, womanAddToCart } = useAddToCartContext();
 
     const [setSize, setSetSize] = useState(sizes)
-
-
-    // const [bob, setBob] = useState(sizes[0])
-
-    // console.log(setSize);
-
-    // console.log(sizes);
-
-
-
-
-    // useEffect(() => {
-    //     if (setSize.us) {
-    //         delete setSize.uk && delete setSize.eu
-    //         let me = setSize;
-    //         delete me.id
-    //         setSetSize(me)
-    //     } else if (setSize.uk) {
-    //         delete setSize.us && delete setSize.eu
-    //         let me = setSize;
-    //         delete me.id
-    //         setSetSize(me)
-    //     } else {
-    //         delete setSize.us && delete setSize.uk
-    //         let me = setSize;
-    //         delete me.id
-    //         setSetSize(me)
-    //     }
-    // }, [setSize])
-
-
-
-    // const coordinate = (setSize, countries) => {
-
-
-    //     let get_size = setSize.map((m) => m[countries])
-    //     if (countries === 'uk') {
-    //         return (
-    //             <Mon pop={setSetSize(get_size)}></Mon>
-
-
-    //         )
-    //     }
-    // if (countries === 'us') {
-    //     return (
-    //         <Mon>
-    //             <button>{setSetSize(get_size)}</button>
-    //         </Mon>
-    //     )
-    // }
-    // if (countries === 'eu') {
-    //     return (
-    //         <Mon>
-    //             <button>{setSetSize(get_size)}</button>
-    //         </Mon>
-    //     )
-    // }
-    // setSetSize(countries)
-
-    // }
 
 
     return (
@@ -122,7 +62,7 @@ const WomenModal = () => {
 
                                         <div className="modal-single-info-cart-container">
                                             <Link to={'/products'} className="modal-single-info-cart-button"
-                                                onClick={() => womanAddToCart(identity, names, images, setSize, prices, descriptions, data)}
+                                                onClick={() => womanAddToCart(identity, names, images, setSize, prices, descriptions, count, stock, data)}
                                             >
                                                 <p className='modal-single-info-cart'>
                                                     <BsHandbag className='modal-cart-icon' />Add To Cart

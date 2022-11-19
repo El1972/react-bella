@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
 import { FaChevronDown, FaHeart, FaShoppingBag } from 'react-icons/fa';
 import { BsHandbag } from "react-icons/bs";
+import { Link, useParams } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context';
-import { useAddToCartContext } from '../context/add_to_cart_context';
 import Modal from '../components/Modal';
 import { Heart, Message, Pencil, QuestionIcon } from './imports';
+import axios from "axios";
 
-// 25 - 0, 34 - 3(1029px)(900), 33 - 3
+
+
 
 const SingleItem = () => {
-
-    const { single_product: items, fetchSingleProduct } = useProductsContext()
-
+    const { single_product } = useProductsContext()
+    const [boy, setBoy] = useState([])
     const [modalOpen, setModalOpen] = useState(false)
-
-
-
-    // Getting the id to appropriate item in an array of items
 
     const { id } = useParams()
 
@@ -25,29 +21,25 @@ const SingleItem = () => {
         fetchSingleProduct(`${id}`)
     }, [id])
 
-    const data = items.find((p) => {
-        return p.id === id
-    })
-
-    const { id: identity, names, images, prices, crossed_price,
-        descriptions, one, two, three, four, five, six } = data || undefined || {}
-
-    // End of getting the id to appropriate item in an array of items
-
-
-
-
-    // Fetching all the properties for a single item
-
-    const { id: unit, prices: values, amount, stock } = items;
-
-    // End of fetching all the properties for a single item
-
-
-    const mouseOver = () => {
-        let questionText = "Hello dear"
-        return questionText
+    const fetchSingleProduct = async () => {
+        // const response = await axios.get('http://localhost:8888/php_api/queries.php')
+        // const response = await axios.get('http://localhost:8888/php_files/men.php')
+        // const response = await axios.get(`http://localhost:8888/single_shoe.php/${id}`)
+        const response = await axios.get(`https://www.bella-shoes.com/single_shoe.php/${id}`)
+        const products = response.data
+        console.log(products);
+        setBoy(products)
     }
+
+    useEffect(() => {
+        fetchSingleProduct()
+    }, [])
+
+    const { id: num, names, images, prices,
+        crossed_price, count, stock, amount,
+        descriptions, one, two, three, four, five, six
+    } = boy
+
 
 
     return (
@@ -114,7 +106,15 @@ const SingleItem = () => {
                                                     <p className='single-info-size'>
                                                         Size
                                                     </p>
-                                                    {modalOpen && <Modal />}
+                                                    {modalOpen && <Modal
+                                                        id={id}
+                                                        images={images}
+                                                        names={names}
+                                                        count={count}
+                                                        prices={prices}
+                                                        stock={stock}
+                                                        amount={amount}
+                                                    />}
                                                 </div>
                                                 {/* </div> */}
 
@@ -188,4 +188,11 @@ const SingleItem = () => {
 }
 
 export default SingleItem
+
+
+
+
+
+
+
 

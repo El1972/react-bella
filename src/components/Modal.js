@@ -11,95 +11,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 
 
-const Modal = () => {
+const Modal = (props) => {
 
-    const { single_product: items, fetchSingleProduct } = useProductsContext();
+    const { id, images, names, count, prices, stock, amount } = props
 
-    const { id } = useParams()
+    console.log(count);
 
-    useEffect(() => {
-        fetchSingleProduct(`${id}`)
-    }, [id])
+    // const { single_product } = useProductsContext()
 
-    const data = items.find((p) => {
-        return p.id === id
-    })
+    // const { id, names, images, prices, count, stock } = single_product
 
-    const { id: identity, names, images, prices, descriptions } = data || undefined || {}
+    // console.log(id, names, images, prices, count, stock);
 
     const { sizes, addToCart } = useAddToCartContext();
 
     const [setSize, setSetSize] = useState(sizes)
 
-
-
-    // const [bob, setBob] = useState(sizes[0])
-
-    // console.log(setSize);
-
-    // console.log(sizes);
-
-
-
-
-    // useEffect(() => {
-    //     if (setSize.us) {
-    //         delete setSize.uk && delete setSize.eu
-    //         let me = setSize;
-    //         delete me.id
-    //         setSetSize(me)
-    //     } else if (setSize.uk) {
-    //         delete setSize.us && delete setSize.eu
-    //         let me = setSize;
-    //         delete me.id
-    //         setSetSize(me)
-    //     } else {
-    //         delete setSize.us && delete setSize.uk
-    //         let me = setSize;
-    //         delete me.id
-    //         setSetSize(me)
-    //     }
-    // }, [setSize])
-
-
-
-    // const coordinate = (setSize, countries) => {
-
-
-    //     let get_size = setSize.map((m) => m[countries])
-    //     if (countries === 'uk') {
-    //         return (
-    //             <Mon pop={setSetSize(get_size)}></Mon>
-
-
-    //         )
-    //     }
-    // if (countries === 'us') {
-    //     return (
-    //         <Mon>
-    //             <button>{setSetSize(get_size)}</button>
-    //         </Mon>
-    //     )
-    // }
-    // if (countries === 'eu') {
-    //     return (
-    //         <Mon>
-    //             <button>{setSetSize(get_size)}</button>
-    //         </Mon>
-    //     )
-    // }
-    // setSetSize(countries)
-
-    // }
-
-
-    // const addActive = (s, index) => {
-    //     if (s.us) {
-    //         setSetSize(setSize => !setSize)
-    //     }
-    // }
-
-    // let activeClass = setSize ? ' active' : null
 
     return (
         <div>
@@ -130,7 +57,7 @@ const Modal = () => {
 
                                         <div className="modal-single-info-cart-container">
                                             <Link to={'/products'} className="modal-single-info-cart-button"
-                                                onClick={() => addToCart(identity, names, images, setSize, prices, descriptions, data)}
+                                                onClick={() => addToCart(id, images, names, count, prices, stock, amount, setSize)}
                                             >
                                                 <p className='modal-single-info-cart'>
                                                     <BsHandbag className='modal-cart-icon' />Add To Cart
@@ -160,10 +87,10 @@ const Modal = () => {
                                     <div className="inner-sizes-container">
                                         {sizes.map((s, index) => {
                                             return (
-                                                <AnimatePresence>
-                                                    <motion.button
+                                                <AnimatePresence key={index}>
+                                                    <motion.button key={index}
                                                         className={`size-button ${s === setSize ? ' active' : null}`}
-                                                        key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                                                        initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                                                         exit={{ opacity: 0 }}
                                                         onClick={() => setSetSize(s)}
                                                     >
@@ -219,7 +146,7 @@ const Modal = () => {
 
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

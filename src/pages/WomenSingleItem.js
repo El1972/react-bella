@@ -12,6 +12,7 @@ import { Heart, Message, Pencil, QuestionIcon } from './imports';
 const WomenSingleItem = () => {
 
     const { women_single_product, womenfetchSingleProduct } = useProductsContext()
+    // const { women_descriptions } = useAddToCartContext()
 
 
     const [modalOpen, setModalOpen] = useState(false)
@@ -29,6 +30,10 @@ const WomenSingleItem = () => {
     const data = women_single_product.find((p) => {
         return p.id === id
     })
+
+    // const women_info = women_descriptions.find((p) => {
+    //     return p.id === id
+    // })
 
     const { id: identity, names, images, prices, crossed_price,
         descriptions, one, two, three, four, five, six } = data || undefined || {}

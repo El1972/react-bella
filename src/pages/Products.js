@@ -8,8 +8,9 @@ import { useAddToCartContext } from '../context/add_to_cart_context'
 
 const Products = () => {
 
-    const { woman_cart, cart, emptyCart, both_carts_amounts_total } = useAddToCartContext()
+    const { cart, woman_cart, emptyCart, both_carts_amounts_total } = useAddToCartContext()
 
+    console.log(woman_cart);
 
     if (cart.length < 1 && woman_cart.length < 1) {
         return (
@@ -66,6 +67,7 @@ const Products = () => {
                         example on counter - & + buttons, they only increment
                         and decrement for that particular component */}
                             {cart.map((c) => {
+                                console.log(c);
                                 return (
                                     <div key={c.id}>
                                         <Cart key={c.id} {...c} />
