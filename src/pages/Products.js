@@ -10,8 +10,6 @@ const Products = () => {
 
     const { cart, woman_cart, emptyCart, both_carts_amounts_total } = useAddToCartContext()
 
-    console.log(woman_cart);
-
     if (cart.length < 1 && woman_cart.length < 1) {
         return (
             <div>
@@ -24,8 +22,6 @@ const Products = () => {
             </div>
         )
     }
-
-    console.log(cart);
 
     return (
         <div>

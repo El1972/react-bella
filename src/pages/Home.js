@@ -73,5 +73,3 @@ export default Home
 
 
 
-// names, images, descriptions, prices, discounts, bestsellers, colors,
-//     designers

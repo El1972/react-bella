@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {
     Header,
-    // Mobile,
     Footer,
     Home,
     Women,
@@ -25,7 +24,6 @@ const App = () => {
                 <div className="wrapper">
                     <div className="sub-wrapper">
                         <Header />
-                        {/* <Mobile /> */}
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="women" element={<Women />} />

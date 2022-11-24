@@ -30,11 +30,7 @@ const Contact = () => {
 
                         <div className="telephone-measure">
                             <div className="telephone-qualities">
-                                <p className='call-us'>Call Us:
-                                    {/* <div className="telephone-container">
-                                        <i className="fa-thin fa-phone-rotary"></i>
-                                    </div> */}
-                                </p>
+                                <p className='call-us'>Call Us:</p>
                                 <div className="telephone-info">
                                     <p className='telephone-one'>+1 (210) 734-2158 US</p>
                                     <p className='telephone-two'>+44 20 2653 1836 UK</p>
@@ -45,11 +41,7 @@ const Contact = () => {
                         </div>
                         <div className="address-measure">
                             <div className="address-qualities">
-                                <p className='address-us'>Address:
-                                    {/* <div className="telephone-container">
-                                        <i className="fa-thin fa-phone-rotary"></i>
-                                    </div> */}
-                                </p>
+                                <p className='address-us'>Address:</p>
                                 <div className="address-info">
                                     <p className='address-one'>6300 VESTAL ROAD, USA</p>
                                     <p className='address-two'>Vestal, NY 13620</p>

@@ -8,8 +8,6 @@ import ItemDelete from './ItemDelete';
 
 const Cart = ({ id, names, images, count, size, prices }) => {
 
-    // const [shoeCount, setShoeCount] = useState(1)
-
     const { cart, emptyCart, adjustCart, deleteProduct } = useAddToCartContext();
 
     if (cart.length < 1) {
@@ -17,14 +15,10 @@ const Cart = ({ id, names, images, count, size, prices }) => {
     }
 
     const increase = () => {
-        // let incCount = shoeCount + 1
-        // setShoeCount(incCount)
         adjustCart(id, 'increase') // adjustCart() - is being called from here
     }
 
     const decrease = () => {
-        // let decCount = shoeCount - 1
-        // setShoeCount(decCount)
         adjustCart(id, 'decrease') // adjustCart() - is being called from here
     }
     return (
@@ -34,35 +28,6 @@ const Cart = ({ id, names, images, count, size, prices }) => {
             <div>
                 <div className="main-container clearfix">
                     <div className="inner-main-container">
-
-                        {/* <img src={`../../images/${images}`}
-                            alt="pop" width="200px"
-                            height="100px" className='checkout-image' />
-                        <div className="cart-shoe-info-container clearfix">
-                            <div className="cart-shoe-info">
-                                {size}
-                            </div>
-                        </div>
-                        <div className='count-container clearfix'>
-                            <div className="inner-count-container">
-                            
-                                <div className="delete-container">
-                                    <div className="inner-delete-container">
-                                        <p>{descriptions}</p>
-                                        <Link to={'.'} onClick={() => deleteProduct(id)}>
-                                            <ItemDelete />
-                                        </Link>
-                                    </div>
-                                </div>
-
-                                <CountButtons
-                                    count={count}
-                                    increase={increase}
-                                    decrease={decrease}
-                                />
-
-                            </div>
-                        </div> */}
 
                         <div className="image-section">
                             <div className="inner-image-section">

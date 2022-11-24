@@ -54,8 +54,8 @@ export const AddToCartProvider = ({ children }) => {
 
 
     const fetchModalSizes = async () => {
+        // const response = await axios.get('https://mybellshoes.com/sizes.php')
         const response = await axios.get('http://localhost:8888/sizes.php')
-        // const response = await axios.get('https://www.bella-shoes.com/sizes.php')
         const products = response.data
         dispatch({ type: 'FETCH_SIZES', payload: products })
     }
@@ -65,58 +65,13 @@ export const AddToCartProvider = ({ children }) => {
     }, [])
 
 
-
-
-    // const fetchSizes = async () => {
-    //     // const response = await axios.get('http://localhost:8888/sizes.php')
-    //     const response = await axios.get('https://www.bella-shoes.com/sizes.php')
-    //     const measures = response.data
-
-    //     dispatch({ type: 'FETCH_SIZES', payload: measures })
-    // }
-
-    // useEffect(() => {
-    //     fetchSizes()
-    // }, [])
-
-
-
-
-    // const fetchDescriptions = async () => {
-    //     // const response = await axios.get('http://localhost:8888/descriptions.php')
-    //     const response = await axios.get('https://www.bella-shoes.com/descriptions.php')
-    //     const description = response.data
-
-    //     dispatch({ type: 'FETCH_DESCRIPTIONS', payload: description })
-    // }
-
-    // useEffect(() => {
-    //     fetchDescriptions()
-    // }, [])
-
-
-
-    // const fetchWomenDescriptions = async () => {
-    //     // const response = await axios.get('http://localhost:8888/women_descriptions.php')
-    //     const response = await axios.get('https://www.bella-shoes.com/women_descriptions.php')
-    //     const women_description = response.data
-
-    //     dispatch({ type: 'FETCH_WOMEN_DESCRIPTIONS', payload: women_description })
-    // }
-
-    // useEffect(() => {
-    //     fetchWomenDescriptions()
-    // }, [])
-
-
-
     const addToCart = (id, images, names, count, prices, stock, amount, size) => {
         dispatch({ type: 'ADD_TO_CART', payload: { id, images, names, count, prices, stock, amount, size } })
     }
 
 
-    const womanAddToCart = (id, names, images, size, prices, descriptions, count, stock, data) => {
-        dispatch({ type: 'WOMAN_ADD_TO_CART', payload: { id, names, images, size, prices, descriptions, count, stock, data } })
+    const womanAddToCart = (id, images, names, count, prices, stock, amount, size) => {
+        dispatch({ type: 'WOMAN_ADD_TO_CART', payload: { id, images, names, count, prices, stock, amount, size } })
     }
 
 
@@ -141,14 +96,12 @@ export const AddToCartProvider = ({ children }) => {
 
 
     const adjustCart = (id, value) => {
-        console.log(id, value);
         dispatch({ type: 'ADJUST_THE_CART', payload: { id, value } })
     }
 
 
     const adjustWomenCart = (id, value) => {
         dispatch({ type: 'ADJUST_WOMEN_CART', payload: { id, value } })
-        console.log(id, value);
     }
 
 
@@ -184,8 +137,7 @@ export const AddToCartProvider = ({ children }) => {
     return (
         <AddToCartContext.Provider value={{
             ...state,
-            // fetchModalSizes,
-            // fetchSizes,
+            fetchModalSizes,
             addToCart,
             adjustWomenCart,
             womanAddToCart,

@@ -38,58 +38,49 @@ const add_to_cart_reducer = (state, action) => {
 
         let [shoeSize] = result
 
-        // const tempObj = state.cart.find((c) => {
-        //     return c.id === id
-        // })
-        // if (tempObj) {
-        //     const tempUnits = state.cart.map((c) => {
-        //         if (c.id === id) {
-        //             let renewedCount = parseInt(c.count) + parseInt(count)
-        //             if (renewedCount > c.stock) {
-        //                 renewedCount = c.stock
-        //             }
-        //             return { ...c, count: parseInt(renewedCount) }
-        //         } else {
-        //             return c
-        //         }
-        //     })
-        //     return { ...state, cart: tempUnits }
-        // } else {
-        //     const newObj = {
-        //         id: id,
-        //         names,
-        //         images,
-        //         size: shoeSize,
-        //         prices: parseInt(prices),
-        //         count: parseInt(count),
-        //         stock: parseInt(stock),
-        //         amount: parseInt(amount),
-        //         max: parseInt(stock)
-        //     }
-        //     return { ...state, cart: [...state.cart, newObj] }
-        // }
-
-        const newObj = {
-            id: id,
-            names,
-            images,
-            size: shoeSize,
-            prices: parseInt(prices),
-            count: parseInt(count),
-            stock: parseInt(stock),
-            amount: parseInt(amount),
-            max: parseInt(stock)
+        const tempObj = state.cart.find((c) => {
+            return c.id === id
+        })
+        if (tempObj) {
+            const tempUnits = state.cart.map((c) => {
+                if (c.id === id) {
+                    let renewedCount = parseInt(c.count) + parseInt(count)
+                    if (renewedCount > c.stock) {
+                        renewedCount = c.stock
+                    }
+                    return { ...c, count: parseInt(renewedCount) }
+                } else {
+                    return c
+                }
+            })
+            return { ...state, cart: tempUnits }
+        } else {
+            const newObj = {
+                id: id,
+                names,
+                images,
+                size: shoeSize,
+                prices: parseInt(prices),
+                count: parseInt(count),
+                stock: parseInt(stock),
+                amount: parseInt(amount),
+                max: parseInt(stock)
+            }
+            return { ...state, cart: [...state.cart, newObj] }
         }
 
-        return { ...state, cart: [...state.cart, newObj] }
+
+
+
 
     }
 
 
 
     if (action.type === 'WOMAN_ADD_TO_CART') {
-        const { id, names, images, size, prices, count, stock, amount, code, data } = action.payload; // destructuring from: action.payload
+        const { id, images, names, count, prices, stock, amount, size } = action.payload; // destructuring from: action.payload
 
+        console.log(id, images, names, count, prices, stock, amount, size);
 
         let { us, uk, eu } = size
 
@@ -103,12 +94,12 @@ const add_to_cart_reducer = (state, action) => {
         let [shoeSize] = result
 
         const tempObj = state.woman_cart.find((c) => {
-            return c.id === id + code
+            return c.id === id
         })
 
         if (tempObj) {
             const tempUnits = state.woman_cart.map((c) => {
-                if (c.id === id + code) {
+                if (c.id === id) {
                     let renewedCount = parseInt(c.count) + parseInt(count)
                     if (renewedCount > c.stock) {
                         renewedCount = c.stock
@@ -121,7 +112,7 @@ const add_to_cart_reducer = (state, action) => {
             return { ...state, woman_cart: tempUnits }
         } else {
             const newObj = {
-                id: id + code,
+                id: id,
                 names,
                 images,
                 size: shoeSize,

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { FaChevronDown, FaHeart, FaShoppingBag } from 'react-icons/fa';
 import { BsHandbag } from "react-icons/bs";
 import { Link, useParams } from 'react-router-dom'
-import { useProductsContext } from '../context/products_context';
 import Modal from '../components/Modal';
 import { Heart, Message, Pencil, QuestionIcon } from './imports';
 import axios from "axios";
@@ -11,7 +10,7 @@ import axios from "axios";
 
 
 const SingleItem = () => {
-    const { single_product } = useProductsContext()
+
     const [boy, setBoy] = useState([])
     const [modalOpen, setModalOpen] = useState(false)
 
@@ -22,12 +21,9 @@ const SingleItem = () => {
     }, [id])
 
     const fetchSingleProduct = async () => {
-        // const response = await axios.get('http://localhost:8888/php_api/queries.php')
-        // const response = await axios.get('http://localhost:8888/php_files/men.php')
-        // const response = await axios.get(`http://localhost:8888/single_shoe.php/${id}`)
-        const response = await axios.get(`https://www.bella-shoes.com/single_shoe.php/${id}`)
+        // const response = await axios.get(`https://mybellshoes.com/single_shoe.php/${id}`)
+        const response = await axios.get(`http://localhost:8888/single_shoe.php/${id}`)
         const products = response.data
-        console.log(products);
         setBoy(products)
     }
 

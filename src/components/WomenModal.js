@@ -10,23 +10,11 @@ import { getConfig } from '@testing-library/react';
 
 
 
-const WomenModal = () => {
+const WomenModal = (props) => {
 
-    const { women_single_product: women_items, womenfetchSingleProduct } = useProductsContext()
+    const { id, images, names, count, prices, stock, amount } = props
 
-
-    const { id } = useParams()
-
-    useEffect(() => {
-        womenfetchSingleProduct(`${id}`)
-    }, [id])
-
-    const data = women_items.find((p) => {
-        return p.id === id
-    })
-
-
-    const { id: identity, names, images, prices, descriptions, count, stock } = data || undefined || {}
+    console.log(id, images, names, count, prices, stock, amount);
 
     const { sizes, womanAddToCart } = useAddToCartContext();
 
@@ -62,7 +50,7 @@ const WomenModal = () => {
 
                                         <div className="modal-single-info-cart-container">
                                             <Link to={'/products'} className="modal-single-info-cart-button"
-                                                onClick={() => womanAddToCart(identity, names, images, setSize, prices, descriptions, count, stock, data)}
+                                                onClick={() => womanAddToCart(id, images, names, count, prices, stock, amount, setSize)}
                                             >
                                                 <p className='modal-single-info-cart'>
                                                     <BsHandbag className='modal-cart-icon' />Add To Cart
@@ -78,8 +66,6 @@ const WomenModal = () => {
                                 {/* Second: Block Of Countries Buttons */}
                                 <div className="countries-container clearfix">
                                     <div className="inner-countries-container">
-                                        {/* <button onClick={() => coordinate(setSize, 'uk')}>uk</button> */}
-                                        {/* <button onClick={() => coordinate('eu')}>eu</button> */}
                                     </div>
                                 </div>
                                 {/* End Of Second: Block Of Countries Buttons */}

@@ -8,7 +8,6 @@ import Modal from '../components/Modal';
 import Chernovik from '../components/Chernovik';
 import Cart from '../components/Cart';
 import CountButtons from '../components/CountButtons';
-import CheckoutItem from '../components/CheckoutItem';
 import WomenCart from '../components/WomenCart'
 import WomenCountButtons from '../components/WomenCountButtons'
 import WomenModal from '../components/WomenModal'
@@ -41,7 +40,7 @@ import WomenSidebar from './WomenSidebar';
 export {
     // components
     Header, Buttons, Footer, Sidebar, Cart,
-    Chernovik, CountButtons, Modal, CheckoutItem,
+    Chernovik, CountButtons, Modal,
     WomenCart, WomenModal, WomenCountButtons,
     WomenSidebar, Heart, Message, Pencil,
     QuestionIcon, Phone, Facebook, Twitter,

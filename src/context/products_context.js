@@ -19,8 +19,8 @@ export const ProductsProvider = ({ children }) => {
 
 
     const fetchProducts = async () => {
-        // const response = await axios.get('https://www.bella-shoes.com/men.php')
         const response = await axios.get('http://localhost:8888/men.php')
+        // const response = await axios.get('https://mybellshoes.com/men.php')
         const items = response.data
 
         dispatch({ type: 'FETCH_PRODUCTS', payload: items })
@@ -62,17 +62,17 @@ export const ProductsProvider = ({ children }) => {
 
     // ---------------------------- Women ----------------------------
 
-    // const womenfetchProducts = async () => {
-    //     // const response = await axios.get('http://localhost:8888/women.php')
-    //     const response = await axios.get('https://www.bella-shoes.com/women.php')
-    //     const women_items = response.data
+    const womenfetchProducts = async () => {
+        const response = await axios.get('http://localhost:8888/women.php')
+        // const response = await axios.get('https://mybellshoes.com/women.php')
+        const women_items = response.data
 
-    //     dispatch({ type: 'WOMEN_FETCH_PRODUCTS', payload: women_items })
-    // }
+        dispatch({ type: 'WOMEN_FETCH_PRODUCTS', payload: women_items })
+    }
 
-    // useEffect(() => {
-    //     womenfetchProducts()
-    // }, [])
+    useEffect(() => {
+        womenfetchProducts()
+    }, [])
 
 
     // const womenfetchSingleProduct = async () => {
@@ -104,9 +104,9 @@ export const ProductsProvider = ({ children }) => {
 
         <ProductsContext.Provider value={{
             ...state,
-            fetchProducts
+            fetchProducts,
             // fetchSingleProduct
-            // womenfetchProducts,
+            womenfetchProducts
             // womenfetchSingleProduct
         }}>
             {children}

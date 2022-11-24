@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: *");
-header("Content-Type: application/json");
+// header("Access-Control-Allow-Headers: *");
+// header("Content-Type: application/json");
 
 $dsn = 'mysql:host=localhost;dbname=react_fetch';
 $username = 'root';

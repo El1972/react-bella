@@ -2,24 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FaChevronDown, FaShoppingBag } from 'react-icons/fa';
 import { BsHandbag } from "react-icons/bs";
-import { useProductsContext } from '../context/products_context';
-import { useAddToCartContext } from '../context/add_to_cart_context';
 import WomenModal from '../components/WomenModal'
 import { Heart, Message, Pencil, QuestionIcon } from './imports';
+import axios from "axios";
+
 
 
 
 const WomenSingleItem = () => {
 
-    const { women_single_product, womenfetchSingleProduct } = useProductsContext()
-    // const { women_descriptions } = useAddToCartContext()
-
-
+    const [girl, setGirl] = useState([])
     const [modalOpen, setModalOpen] = useState(false)
-
-
-
-    // Getting the id to appropriate item in an array of items
 
     const { id } = useParams()
 
@@ -27,34 +20,20 @@ const WomenSingleItem = () => {
         womenfetchSingleProduct(`${id}`)
     }, [id])
 
-    const data = women_single_product.find((p) => {
-        return p.id === id
-    })
-
-    // const women_info = women_descriptions.find((p) => {
-    //     return p.id === id
-    // })
-
-    const { id: identity, names, images, prices, crossed_price,
-        descriptions, one, two, three, four, five, six } = data || undefined || {}
-
-
-    // End of getting the id to appropriate item in an array of items
-
-
-
-
-    // Fetching all the properties for a single item
-
-    const { id: unit, prices: values, amount, stock } = women_single_product;
-
-    // End of fetching all the properties for a single item
-
-
-    const mouseOver = () => {
-        let questionText = "Hello dear"
-        return questionText
+    const womenfetchSingleProduct = async () => {
+        // const response = await axios.get(`https://mybellshoes.com/women_single_shoe.php/${id}`);
+        const response = await axios.get(`http://localhost:8888/women_single_shoe.php/${id}`)
+        const women_products = response.data
+        setGirl(women_products)
     }
+
+    useEffect(() => {
+        womenfetchSingleProduct()
+    }, [])
+
+    const { id: num, names, images, prices,
+        crossed_price, count, stock, amount,
+        descriptions, one, two, three, four, five, six } = girl
 
 
     return (
@@ -122,7 +101,15 @@ const WomenSingleItem = () => {
                                                     <p className='single-info-size'>
                                                         Size
                                                     </p>
-                                                    {modalOpen && <WomenModal />}
+                                                    {modalOpen && <WomenModal
+                                                        id={id}
+                                                        images={images}
+                                                        names={names}
+                                                        count={count}
+                                                        prices={prices}
+                                                        stock={stock}
+                                                        amount={amount}
+                                                    />}
                                                 </div>
                                                 {/* </div> */}
 
@@ -141,7 +128,6 @@ const WomenSingleItem = () => {
                                                         in 1-2 weeks
                                                         <div
                                                             className="question-icon-container"
-                                                            onMouseOver={mouseOver}
                                                         >
                                                             <QuestionIcon />
                                                         </div>
